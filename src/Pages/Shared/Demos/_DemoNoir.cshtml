@@ -1,0 +1,56 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-noir-layout @($"demo-{Model.Id}")">
+    <div class="noir-film-grain"></div>
+    <div class="noir-blinds"></div>
+    
+    <div class="noir-content-frame">
+        <header class="noir-header">
+            <div class="noir-badge">Classified File N° 404</div>
+            <h3 class="noir-title">@Model.Name</h3>
+            <div class="noir-subtitle">The Shadow Knows</div>
+        </header>
+
+        <main class="noir-main-content">
+            <div class="noir-split-layout">
+                <div class="noir-text-column">
+                    <p class="noir-typewriter-text">
+                        10:45 PM. The rain hasn't stopped since Tuesday. The city looks like a wet grave. 
+                        They call it "dangerous elegance", but down here in the gutter, it's just survival.
+                        The neon bleeds into the puddles like a wound that won't close.
+                    </p>
+                    <div class="noir-quote">
+                        "In this town, the only difference between light and shadow is what you're trying to hide."
+                    </div>
+                    <button class="noir-action-btn">
+                        <span class="btn-text">Investigate</span>
+                    </button>
+                </div>
+                
+                <div class="noir-image-column">
+                    <div class="noir-image-wrapper">
+                        <img src="/api/img?seed=noir_detective&w=500&h=700&grayscale=true" alt="Noir Cinematic Shot" class="noir-image" width="500" height="700" />
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="noir-divider"></div>
+            
+            <div class="noir-dossier-grid">
+                <div class="dossier-item">
+                    <div class="dossier-label">SUBJECT</div>
+                    <div class="dossier-value">Unknown</div>
+                </div>
+                <div class="dossier-item">
+                    <div class="dossier-label">STATUS</div>
+                    <div class="dossier-value accent">AT LARGE</div>
+                </div>
+                <div class="dossier-item">
+                    <div class="dossier-label">LOCATION</div>
+                    <div class="dossier-value">Downtown District</div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>

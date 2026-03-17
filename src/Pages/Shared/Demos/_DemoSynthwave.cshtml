@@ -1,0 +1,50 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-synthwave-layout @($"demo-{Model.Id}")">
+    
+    <!-- Horizon and Sun -->
+    <div class="synthwave-horizon">
+        <div class="synthwave-sun"></div>
+        <!-- Scanlines overlay for VHS effect -->
+        <div class="synthwave-vhs-scanlines"></div>
+    </div>
+
+    <!-- 3D Perspective Grid -->
+    <div class="synthwave-grid-container">
+        <div class="synthwave-grid"></div>
+    </div>
+
+    <div class="synthwave-container">
+        
+        <header class="synthwave-header">
+            <div class="synthwave-logo">R E T R O C O R P</div>
+            <nav class="synthwave-nav">
+                <a href="#">ARCHIVE</a>
+                <a href="#">NEON</a>
+                <a href="#">SYSTEM</a>
+            </nav>
+        </header>
+
+        <section class="synthwave-hero">
+            <h3 class="synthwave-chrome-text" data-text="@Model.Name">@Model.Name</h3>
+            <h4 class="synthwave-neon-text">OUTRUN THE FUTURE</h4>
+            
+            <div class="synthwave-content-box">
+                <p class="synthwave-description">
+                    @Model.Description
+                </p>
+                <button class="synthwave-neon-button">
+                    <span class="button-text">INITIALIZE SEQUENCE</span>
+                </button>
+            </div>
+        </section>
+
+        <footer class="synthwave-footer">
+            <div class="synthwave-stats">
+                <span>V-SYNC: <span class="neon-cyan">ON</span></span>
+                <span>SYS TIME: <span class="neon-magenta">19:85</span></span>
+            </div>
+        </footer>
+
+    </div>
+</div>

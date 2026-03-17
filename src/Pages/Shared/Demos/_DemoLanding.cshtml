@@ -1,0 +1,28 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-landing @($"demo-{Model.Id}")">
+    <header class="landing-header">
+        <div class="landing-logo">@Model.Name</div>
+        <button class="landing-cta-small">Get Started</button>
+    </header>
+    <main class="landing-hero">
+        <div class="landing-hero-content">
+            <div class="landing-pill">New Feature Announcement</div>
+            <h3 class="landing-h1">Experience <br> <span class="landing-highlight">@Model.Emotion</span></h3>
+            <p class="landing-lead">@Model.Description</p>
+            <div class="landing-actions">
+                <button class="landing-btn-primary">Start free trial</button>
+                <button class="landing-btn-secondary">View demo</button>
+            </div>
+            <div class="landing-social-proof">
+                Trusted by innovative teams worldwide.
+            </div>
+        </div>
+        <div class="landing-hero-visual">
+            <div class="landing-floating-element el-1"></div>
+            <div class="landing-floating-element el-2"></div>
+            <div class="landing-floating-element el-3"></div>
+            <div class="landing-main-visual"></div>
+        </div>
+    </main>
+</div>

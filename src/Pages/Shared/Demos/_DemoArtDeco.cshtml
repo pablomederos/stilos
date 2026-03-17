@@ -1,0 +1,74 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-artdeco-layout @($"demo-{Model.Id}")">
+
+    <div class="artdeco-page">
+
+        <div class="artdeco-sunburst"></div>
+
+        <header class="artdeco-header">
+            <div class="artdeco-header-line"></div>
+            <nav class="artdeco-nav">
+                <a href="#">LOUNGE</a>
+                <a href="#">SOCIÉTÉ</a>
+                <div class="artdeco-brand">◆ MÉTROPOLE ◆</div>
+                <a href="#">GALERIE</a>
+                <a href="#">BIJOUX</a>
+            </nav>
+            <div class="artdeco-header-line"></div>
+        </header>
+
+        <section class="artdeco-hero">
+            <div class="artdeco-chevron-pattern"></div>
+            <div class="artdeco-hero-content">
+                <div class="artdeco-decorative-top">
+                    <span class="artdeco-fan">▽ ◇ ▽</span>
+                </div>
+                <h3 class="artdeco-title">@Model.Name.ToUpper()</h3>
+                <div class="artdeco-divider">
+                    <span class="artdeco-divider-diamond">◆</span>
+                </div>
+                <p class="artdeco-subtitle">@Model.Description</p>
+                <button class="artdeco-btn">ENTER THE GRAND SALON</button>
+            </div>
+        </section>
+
+        <section class="artdeco-features">
+            <div class="artdeco-stepped-border"></div>
+            <div class="artdeco-features-grid">
+                <div class="artdeco-feature">
+                    <div class="artdeco-feature-frame">
+                        <span class="artdeco-feature-num">I</span>
+                    </div>
+                    <h4>GEOMETRÍA</h4>
+
+                    <p>Sunbursts, abanicos y triángulos escalonados que evocan los rascacielos de Manhattan.</p>
+                </div>
+                <div class="artdeco-feature">
+                    <div class="artdeco-feature-frame">
+                        <span class="artdeco-feature-num">II</span>
+                    </div>
+                    <h4>OPULENCIA</h4>
+
+                    <p>@Model.Emotion — Dorado sobre negro, la combinación del jazz y el glamour.</p>
+                </div>
+                <div class="artdeco-feature">
+                    <div class="artdeco-feature-frame">
+                        <span class="artdeco-feature-num">III</span>
+                    </div>
+                    <h4>SIMETRÍA</h4>
+
+                    <p>@Model.Sectors — Composiciones bilaterales que evocan las puertas de los transatlánticos.</p>
+                </div>
+            </div>
+            <div class="artdeco-stepped-border"></div>
+        </section>
+
+        <footer class="artdeco-footer">
+            <div class="artdeco-footer-ornament">◆ ◆ ◆</div>
+            <span>THE JAZZ VISUAL AGE — MCMXXV</span>
+        </footer>
+
+    </div>
+
+</div>

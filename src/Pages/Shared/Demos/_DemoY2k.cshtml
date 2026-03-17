@@ -1,0 +1,66 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-y2k-layout @($"demo-{Model.Id}")">
+    <div class="y2k-fluid-bg"></div>
+    <div class="y2k-blob y2k-blob-1"></div>
+    <div class="y2k-blob y2k-blob-2"></div>
+    
+    <div class="y2k-micro-text y2k-micro-top-left">sys.version.2000 // online</div>
+    <div class="y2k-micro-text y2k-micro-top-right">connect: optimal bandwidth</div>
+    <div class="y2k-micro-text y2k-micro-bottom-left">render_engine_v1.0</div>
+    <div class="y2k-micro-text y2k-micro-bottom-right">p_64_poly_count</div>
+
+    <header class="y2k-header">
+        <h3 class="y2k-logo">
+
+            <span class="y2k-logo-text">y2k_portal</span>
+            <div class="y2k-rotating-star">✦</div>
+        </h3>
+
+        <nav class="y2k-nav">
+            <a href="#" class="y2k-bubble-link">ciber_espacio</a>
+            <a href="#" class="y2k-bubble-link">descargas</a>
+            <a href="#" class="y2k-bubble-link">chat_room</a>
+        </nav>
+    </header>
+
+    <main class="y2k-main">
+        <div class="y2k-content-wrapper">
+            <h3 class="y2k-super-title">
+                <span class="y2k-chrome-text">milenio</span>
+                <span class="y2k-bondi-text">líquido</span>
+            </h3>
+            
+            <div class="y2k-frost-container">
+                <div class="y2k-cyber-ornament"></div>
+                <h4>@Model.Name</h4>
+
+                <p class="y2k-description">
+                    @Model.Description
+                </p>
+                <button class="y2k-aqua-btn">
+                    <span>iniciar_secuencia</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="y2k-visual-section">
+            <div class="y2k-image-blob-container">
+                <!-- Using an unsplash image that looks like a metallic/holographic CD or 3D render to fit Y2K -->
+                <img src="/api/img?seed=y2k_holographic&w=1600&h=900" alt="Holographic Y2K 3D Art" class="y2k-hero-image" width="1600" height="900" />
+
+
+                <div class="y2k-gel-overlay"></div>
+            </div>
+            
+            <div class="y2k-data-pad">
+                <div class="y2k-pad-header">datos_tecnicos.exe</div>
+                <ul class="y2k-data-list">
+                    <li><span class="y2k-matrix-text">STATUS:</span> OPERACIONAL</li>
+                    <li><span class="y2k-matrix-text">SPEED:</span> 56K MODEM</li>
+                    <li><span class="y2k-matrix-text">AURA:</span> TRANSLUCENT</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</div>

@@ -1,0 +1,49 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-cluttercore @($"demo-{Model.Id}")">
+    <div class="clutter-container">
+        <div class="clutter-header">
+            <div class="clutter-title-block">
+                <h3 class="clutter-title">@Model.Name</h3>
+                <span class="clutter-subtitle">Colección Personal</span>
+            </div>
+            <div class="clutter-tag">Vintage &bull; Artesanal &bull; 2026</div>
+        </div>
+        
+        <div class="clutter-grid">
+            <div class="clutter-item item-1">
+                <div class="polaroid">
+                    <div class="polaroid-img"></div>
+                    <span class="polaroid-caption">Recuerdos</span>
+                </div>
+            </div>
+            <div class="clutter-item item-2">
+                <div class="polaroid">
+                    <div class="polaroid-img"></div>
+                    <span class="polaroid-caption">Hallazgos</span>
+                </div>
+            </div>
+            <div class="clutter-item item-3">
+                <div class="polaroid">
+                    <div class="polaroid-img"></div>
+                    <span class="polaroid-caption">Tesoros</span>
+                </div>
+            </div>
+            <div class="clutter-item item-4">
+                <div class="polaroid">
+                    <div class="polaroid-img"></div>
+                    <span class="polaroid-caption">Momentos</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="clutter-notes">
+            <p>@Model.Description</p>
+        </div>
+        
+        <footer class="clutter-footer">
+            <span class="clutter-stamp">@Model.Name.ToUpper() &mdash; 2026</span>
+            <span class="clutter-credit">Hecho con ♥</span>
+        </footer>
+    </div>
+</div>

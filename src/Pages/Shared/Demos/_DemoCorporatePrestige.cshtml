@@ -1,0 +1,83 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-corporate-prestige @($"demo-{Model.Id}")">
+    <div class="corporate-container">
+        
+        <!-- Navbar -->
+        <header class="corporate-header">
+            <div class="corporate-logo">
+                <span class="corporate-mark"></span>
+                @Model.Name
+            </div>
+            <nav class="corporate-nav">
+                <a href="#" class="corporate-nav-link">Wealth Management</a>
+                <a href="#" class="corporate-nav-link">Investment Banking</a>
+                <a href="#" class="corporate-nav-link">Global Research</a>
+                <a href="#" class="corporate-btn-primary">Client Login</a>
+            </nav>
+        </header>
+
+        <!-- Main Content Grid -->
+        <main class="corporate-grid">
+            
+            <!-- Lead Article / Hero -->
+            <article class="corporate-hero">
+                <div class="corporate-meta">
+                    <span class="corporate-category">Global Outlook</span>
+                    <span class="corporate-date">Q3 2026 Report</span>
+                </div>
+                <h3 class="corporate-hero-title">
+                    <a href="#" class="corporate-link-effect">Navigating Macroeconomic Volatility in Global Markets</a>
+                </h3>
+                <p class="corporate-hero-excerpt">
+                    @Model.Description
+                </p>
+                <div class="corporate-author">
+                    By The Strategic Advisory Committee
+                </div>
+            </article>
+
+            <!-- Architectural Image -->
+            <aside class="corporate-visual">
+                <div class="corporate-image"></div>
+                <div class="corporate-caption">Fig 1. European Headquarters, Frankfurt.</div>
+            </aside>
+
+            <!-- Data / Secondary Column -->
+            <aside class="corporate-data-column">
+                <div class="corporate-widget">
+                    <h4 class="corporate-widget-title">Market Indices</h4>
+
+                    <ul class="corporate-data-list">
+                        <li class="corporate-data-item">
+                            <span class="corporate-data-label">S&P 500</span>
+                            <span class="corporate-data-value positive">5,412.30 ▲</span>
+                        </li>
+                        <li class="corporate-data-item">
+                            <span class="corporate-data-label">FTSE 100</span>
+                            <span class="corporate-data-value positive">8,104.55 ▲</span>
+                        </li>
+                        <li class="corporate-data-item">
+                            <span class="corporate-data-label">Nikkei 225</span>
+                            <span class="corporate-data-value negative">38,202.10 ▼</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="corporate-widget">
+                    <h4 class="corporate-widget-title">Latest Insights</h4>
+
+                    <ul class="corporate-news-list">
+                        <li class="corporate-news-item">
+                            <a href="#" class="corporate-link-effect">Demographic shifts and long-term yield curves</a>
+                        </li>
+                        <li class="corporate-news-item">
+                            <a href="#" class="corporate-link-effect">Regulatory frameworks in decentralized finance</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            
+        </main>
+    </div>
+</div>

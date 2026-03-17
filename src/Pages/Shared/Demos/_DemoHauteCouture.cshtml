@@ -1,0 +1,49 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-haute-couture-layout @($"demo-{Model.Id}")">
+    <div class="hc-background-text">AVANT-GARDE</div>
+    
+    <header class="hc-header">
+        <h4 class="hc-logo">Maison</h4>
+        <nav class="hc-nav">
+            <a href="#">SS26</a>
+            <a href="#">FW25</a>
+            <a href="#">ARCHIVE</a>
+        </nav>
+        <div class="hc-lang-toggle">FR / EN</div>
+    </header>
+
+    <main class="hc-main">
+        <div class="hc-image-split">
+            <div class="hc-image-container left-image">
+                <img src="/api/img?seed=fashion1&w=800&h=1200&grayscale=true" alt="High contrast black and white fashion model" class="hc-img" width="800" height="1200" />
+
+            </div>
+            
+            <div class="hc-text-content">
+                <h3 class="hc-title">
+                    <span class="hc-title-part offset-right">@Model.Name</span>
+                </h3>
+                
+                <p class="hc-description">
+                    / 01 // @Model.Description
+                </p>
+                
+                <a href="#" class="hc-explore-btn">
+                    EXPLORE <span class="hc-arrow">→</span>
+                </a>
+            </div>
+
+            <div class="hc-image-container right-image">
+                <img src="/api/img?seed=fashion2&w=800&h=1200&grayscale=true" alt="Haute couture detail black and white" class="hc-img" width="800" height="1200" />
+
+            </div>
+        </div>
+        
+        <div class="hc-vertical-text">
+            <span>FALL WINTER COLLECTION // EST. 2026</span>
+        </div>
+    </main>
+
+    <div class="hc-cursor-follower"></div>
+</div>

@@ -1,0 +1,62 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-absexpress-layout @($"demo-{Model.Id}")">
+
+    <div class="absexpress-page">
+
+        <div class="absexpress-grain"></div>
+        <div class="absexpress-paint-layer"></div>
+        <div class="absexpress-splatter"></div>
+        <div class="absexpress-drips"></div>
+
+        <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true" focusable="false">
+            <filter id="rough-edge">
+                <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="15" />
+            </filter>
+            <filter id="ink-spread">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="ink" />
+                <feComposite in="SourceGraphic" in2="ink" operator="atop" />
+            </filter>
+        </svg>
+
+        <section class="absexpress-colorfield absexpress-field-1"></section>
+        <section class="absexpress-colorfield absexpress-field-2"></section>
+
+        <div class="absexpress-content">
+
+            <header class="absexpress-header">
+                <span class="absexpress-mark">AE</span>
+            </header>
+
+            <section class="absexpress-hero">
+                <h3 class="absexpress-title">@Model.Name</h3>
+                <p class="absexpress-subtitle">@Model.Description</p>
+            </section>
+
+            <section class="absexpress-body">
+                <div class="absexpress-text-block">
+                    <span class="absexpress-caption">action painting</span>
+                    <p>La pantalla como lienzo de acción. El gesto humano traducido en textura digital, salpicaduras de color industrial y la energía visceral del dripping.</p>
+                </div>
+                <div class="absexpress-text-block">
+                    <span class="absexpress-caption">color field</span>
+                    <p>Bloques inmensos de color profundo con bordes difuminados. El color ES el contenido. La vibración luminosa de una pintura de Rothko pulsando en la pantalla.</p>
+                </div>
+                <div class="absexpress-text-block">
+                    <span class="absexpress-caption">@Model.Emotion</span>
+                    <p>@Model.Sectors</p>
+                </div>
+            </section>
+
+            <div class="absexpress-brushstroke absexpress-stroke-1"></div>
+            <div class="absexpress-brushstroke absexpress-stroke-2"></div>
+            <div class="absexpress-brushstroke absexpress-stroke-3"></div>
+
+            <div class="absexpress-canvas-texture"></div>
+        </div>
+
+    </div>
+
+</div>

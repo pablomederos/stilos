@@ -1,0 +1,23 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-sticker @($"demo-{Model.Id}")">
+    <header class="sticker-header">
+        <h3 class="sticker-title">@Model.Name</h3>
+        <p class="sticker-tagline">@Model.Emotion – @Model.Sectors</p>
+    </header>
+    <section class="sticker-hero">
+        <div class="sticker-hero-visual">
+            <img src="/api/img?seed=sticker_hero&w=800&h=600" alt="Sticker hero image" width="800" height="600" />
+
+        </div>
+        <div class="sticker-hero-content">
+            <h4 class="sticker-hero-title">¡Collage y Diversión!</h4>
+            <p class="sticker-hero-subtitle">Recortes, pegatinas y una explosión de creatividad.</p>
+            <button class="sticker-btn-primary">Explorar</button>
+            <button class="sticker-btn-secondary">Ver Demo</button>
+        </div>
+    </section>
+    <footer class="sticker-footer">
+        <span class="sticker-footer-text">© @Model.Name – Todos los derechos reservados</span>
+    </footer>
+</div>

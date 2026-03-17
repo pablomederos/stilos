@@ -1,0 +1,7 @@
+.dockerignore
+.agent/
+.git/
+.gitignore
+*.md
+obj/
+bin/

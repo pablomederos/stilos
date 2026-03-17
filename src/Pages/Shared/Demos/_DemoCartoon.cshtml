@@ -1,0 +1,23 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-cartoon @($"demo-{Model.Id}")">
+    <header class="cartoon-header">
+        <h3 class="cartoon-title">@Model.Name</h3>
+        <p class="cartoon-tagline">@Model.Emotion – @Model.Sectors</p>
+    </header>
+    <section class="cartoon-hero">
+        <div class="cartoon-hero-visual">
+            <img src="/api/img?seed=cartoon_hero&w=800&h=600" alt="Cartoon hero image" width="800" height="600" />
+
+        </div>
+        <div class="cartoon-hero-content">
+            <h4 class="cartoon-hero-title">¡Bienvenido al Mundo Cartoon!</h4>
+            <p class="cartoon-hero-subtitle">Diviértete con colores vivos, trazos gruesos y personajes alegres.</p>
+            <button class="cartoon-btn-primary">Explorar</button>
+            <button class="cartoon-btn-secondary">Ver Demo</button>
+        </div>
+    </section>
+    <footer class="cartoon-footer">
+        <span class="cartoon-footer-text">© @Model.Name – Todos los derechos reservados</span>
+    </footer>
+</div>

@@ -1,0 +1,23 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-kawaii @($"demo-{Model.Id}")">
+    <header class="kawaii-header">
+        <h3 class="kawaii-title">@Model.Name</h3>
+        <p class="kawaii-tagline">@Model.Emotion – @Model.Sectors</p>
+    </header>
+    <section class="kawaii-hero">
+        <div class="kawaii-hero-visual">
+            <img src="/api/img?seed=kawaii_hero&w=800&h=600" alt="Kawaii hero image" width="800" height="600" />
+
+        </div>
+        <div class="kawaii-hero-content">
+            <h4 class="kawaii-hero-title">¡Adorable y Colorido!</h4>
+            <p class="kawaii-hero-subtitle">Personajes tiernos, pastel y vibrante energía.</p>
+            <button class="kawaii-btn-primary">Explorar</button>
+            <button class="kawaii-btn-secondary">Ver Demo</button>
+        </div>
+    </section>
+    <footer class="kawaii-footer">
+        <span class="kawaii-footer-text">© @Model.Name – Todos los derechos reservados</span>
+    </footer>
+</div>

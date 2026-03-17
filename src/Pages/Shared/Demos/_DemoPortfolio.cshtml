@@ -1,0 +1,29 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-portfolio @($"demo-{Model.Id}")">
+    <div class="portfolio-container">
+        <div class="portfolio-marquee">
+            <span>SELECTED WORKS — @Model.Name.ToUpper() — CREATIVE EXPRESSION —</span>
+        </div>
+        <div class="portfolio-hero">
+            <h3 class="portfolio-huge-text">@Model.Emotion.ToUpper()</h3>
+            <p class="portfolio-hero-subtitle">@Model.Name — Colección 2026</p>
+            <div class="portfolio-hero-image"></div>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-project project-1">
+                <div class="project-image"></div>
+                <h4>Project Alpha</h4>
+                <p>Dirección de arte</p>
+            </div>
+            <div class="portfolio-project project-2">
+                <div class="project-image"></div>
+                <h4>Project Beta</h4>
+                <p>Branding</p>
+            </div>
+        </div>
+        <footer class="portfolio-footer">
+            <a href="#" class="portfolio-btn">Discover More</a>
+        </footer>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-doodle @($"demo-{Model.Id}")">
+    <header class="doodle-header">
+        <h3 class="doodle-title">@Model.Name</h3>
+        <p class="doodle-tagline">@Model.Emotion – @Model.Sectors</p>
+    </header>
+    
+    <div class="doodle-notebook-container">
+        
+        <div class="doodle-sticky-note">
+            <span class="doodle-pin">📌</span>
+            <p>¡No olvidar!</p>
+            <ul>
+                <li>Líneas irregulares</li>
+                <li><del>Perfección</del> Caos creativo</li>
+                <li>Mucha personalidad</li>
+            </ul>
+        </div>
+
+        <section class="doodle-hero">
+            <div class="doodle-hero-content">
+                <h4 class="doodle-hero-title">¡<span class="doodle-underline">Rasgos libres</span> y creativos!</h4>
+                <div class="doodle-scribble"></div>
+                <p class="doodle-hero-subtitle">
+                    Líneas sueltas, garabatos y energía espontánea. 
+                    <br><span class="doodle-small-text">(Aquí no usamos reglas ni compás)</span>
+                </p>
+                <div class="doodle-actions">
+                    <button class="doodle-btn-primary">¡Explorar ahora!</button>
+                    <button class="doodle-btn-secondary">Ver más...</button>
+                </div>
+            </div>
+            
+            <div class="doodle-hero-visual">
+                <img src="/api/img?seed=doodle_hero&w=600&h=500" alt="Doodle hero image" width="600" height="500" />
+
+                <div class="doodle-arrow-curved"></div>
+                <div class="doodle-caption">Es un boceto genial...</div>
+            </div>
+        </section>
+
+        <section class="doodle-features">
+            <div class="doodle-card">
+                <h5>Bocetos Rápidos</h5>
+                <p>Todo comienza con lápiz y papel.</p>
+            </div>
+            <div class="doodle-card doodle-card-alt">
+                <h5>Colores Pastel</h5>
+                <p>Manchas de marcador para resaltar.</p>
+            </div>
+            <div class="doodle-card">
+                <h5>Tipografía Manual</h5>
+                <p>Nuestra letra (casi) siempre es legible.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="doodle-footer">
+        <span class="doodle-footer-text">© @Model.Name – Dibujado con <span class="doodle-heart">❤️</span></span>
+    </footer>
+</div>

@@ -1,0 +1,89 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-brutalism-web @($"demo-{Model.Id}")">
+    <div class="brutal-container">
+        <!-- Brutalist Header -->
+        <header class="brutal-header">
+            <h3 class="brutal-title">@Model.Name</h3>
+            <nav class="brutal-nav">
+                <a href="#" class="brutal-link">INDEX</a>
+                <a href="#" class="brutal-link">ABOUT</a>
+                <a href="#" class="brutal-link">CONTACT</a>
+                <a href="#" class="brutal-link">SHOP</a>
+            </nav>
+        </header>
+
+        <!-- Main Body -->
+        <main class="brutal-main">
+            <div class="brutal-sidebar">
+                <img src="/api/img?seed=brutal&w=400&h=600" alt="Random image" class="brutal-img" width="400" height="600" />
+
+                <div class="brutal-box">
+                    <p>WARNING:</p>
+                    <p>THIS SITE IS BEST VIEWED <marquee scrollamount="10">IN 1998</marquee></p>
+                </div>
+            </div>
+
+            <article class="brutal-article">
+                <h4 class="brutal-heading">HONESTIDAD CRUDA & ANTIDISEÑO</h4>
+                <hr class="brutal-hr" />
+                
+                <p class="brutal-text">
+                    @Model.Description
+                </p>
+
+                <p class="brutal-text">
+                    This is an unstyled paragraph trying to communicate raw data. 
+                    <a href="#" class="brutal-link">Click here to go nowhere.</a> 
+                    Do not expect hover animations.
+                </p>
+
+                <div class="brutal-grid-mess">
+                    <div class="brutal-grid-item" style="grid-column: span 2; background: #ffff00;">
+                        <span class="brutal-huge">!</span>
+                    </div>
+                    <div class="brutal-grid-item" style="background: #ff00ff; color: white;">
+                        No Padding
+                    </div>
+                    <div class="brutal-grid-item" style="transform: rotate(-3deg); position: relative; top: -10px;">
+                        Ignore Grid
+                    </div>
+                    <div class="brutal-grid-item" style="grid-column: span 3; border-top: 5px dashed black;">
+                        <button class="brutal-btn" onclick="alert('Funcionalidad cruda')">SUBMIT FORM</button>
+                    </div>
+                </div>
+                
+                <div class="brutal-table-wrapper">
+                    <table class="brutal-table">
+                        <thead>
+                            <tr>
+                                <th>FEATURE</th>
+                                <th>STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Border-radius</td>
+                                <td>FALSE</td>
+                            </tr>
+                            <tr>
+                                <td>Box-shadow</td>
+                                <td>FALSE</td>
+                            </tr>
+                            <tr>
+                                <td>Gradients</td>
+                                <td>FALSE</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </article>
+        </main>
+        
+        <footer class="brutal-footer">
+            <div class="brutal-footer-text">© ANY YEAR. NO RIGHTS RESERVED.</div>
+            <a href="#" class="brutal-link">BACK TO TOP ↑</a>
+        </footer>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-wabisabi-layout @($"demo-{Model.Id}")">
+    <!-- Heavy Grain/Noise Texture -->
+    <div class="wabisabi-grain"></div>
+    
+    <!-- Empty Space (Ma) emphasis -->
+    <div class="wabisabi-container">
+        
+        <header class="wabisabi-header">
+            <div class="wabisabi-logo">間</div>
+            <div class="wabisabi-meta-top">
+                <span>ESTÉTICA DE LO IMPERMANENTE</span>
+                <span>/</span>
+                <span>2026</span>
+            </div>
+        </header>
+
+        <section class="wabisabi-hero">
+            <div class="wabisabi-text-side">
+                <span class="wabisabi-kanji">侘寂</span>
+                <h3 class="wabisabi-title">@Model.Name</h3>
+                
+                <div class="wabisabi-description-box">
+                    <p class="wabisabi-description">
+                        @Model.Description
+                    </p>
+                    <p class="wabisabi-sub-description">
+                        Nada dura.<br>
+                        Nada está terminado.<br>
+                        Nada es perfecto.
+                    </p>
+                </div>
+            </div>
+
+            <div class="wabisabi-visual-side">
+                <div class="wabisabi-image-wrapper">
+                    <!-- Image with heavy grain and torn edges -->
+                    <img src="/api/img?seed=wabisabi_raku&w=800&h=1000" alt="Cerámica Raku" class="wabisabi-photo" width="800" height="1000" />
+
+
+                    <div class="wabisabi-kintsugi"></div>
+                    <div class="wabisabi-ink-stain"></div>
+                </div>
+                <div class="wabisabi-caption">La pátina del tiempo</div>
+            </div>
+        </section>
+
+        <section class="wabisabi-footer-asymmetric">
+            <div class="wabisabi-empty-space"></div>
+            <div class="wabisabi-quote">
+                "Reconocer lo esencial y dejar ir el resto."
+            </div>
+        </section>
+
+    </div>
+</div>

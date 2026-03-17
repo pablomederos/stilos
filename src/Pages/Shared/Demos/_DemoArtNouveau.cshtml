@@ -1,0 +1,72 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-artnouveau-layout @($"demo-{Model.Id}")">
+
+    <div class="artnouveau-page">
+
+        <div class="artnouveau-border-frame">
+            <div class="artnouveau-corner artnouveau-corner-tl"></div>
+            <div class="artnouveau-corner artnouveau-corner-tr"></div>
+            <div class="artnouveau-corner artnouveau-corner-bl"></div>
+            <div class="artnouveau-corner artnouveau-corner-br"></div>
+        </div>
+
+        <header class="artnouveau-header">
+            <div class="artnouveau-ornament-left">❦</div>
+            <div class="artnouveau-brand">Art Nouveau</div>
+            <div class="artnouveau-ornament-right">❦</div>
+        </header>
+
+        <nav class="artnouveau-nav">
+            <div class="artnouveau-vine-line"></div>
+            <a href="#">Galerie</a>
+            <span class="artnouveau-dot">✿</span>
+            <a href="#">Atelier</a>
+            <span class="artnouveau-dot">✿</span>
+            <a href="#">Jardin</a>
+            <div class="artnouveau-vine-line"></div>
+        </nav>
+
+        <section class="artnouveau-hero">
+            <div class="artnouveau-hero-image">
+                <img src="/api/img?seed=nouveau1&w=600&h=800" alt="Art Nouveau elegance" class="artnouveau-img" width="600" height="800" />
+
+                <div class="artnouveau-image-frame-ornament"></div>
+            </div>
+            <div class="artnouveau-hero-text">
+                <h3 class="artnouveau-title">@Model.Name</h3>
+                <div class="artnouveau-flourish">— ✾ —</div>
+                <p class="artnouveau-subtitle">@Model.Description</p>
+                <button class="artnouveau-btn">Découvrir ❧</button>
+            </div>
+        </section>
+
+        <section class="artnouveau-features">
+            <div class="artnouveau-feature">
+                <span class="artnouveau-feature-icon">🦋</span>
+                <h4>Líneas sinuosas</h4>
+
+                <p>Tallos ondulantes y curvas orgánicas que fluyen como enredaderas por toda la composición.</p>
+            </div>
+            <div class="artnouveau-feature">
+                <span class="artnouveau-feature-icon">🦚</span>
+                <h4>@Model.Emotion</h4>
+
+                <p>Inspirado en la naturaleza: libélulas, pavos reales y flores estilizadas como motivos decorativos.</p>
+            </div>
+            <div class="artnouveau-feature">
+                <span class="artnouveau-feature-icon">🌸</span>
+                <h4>Ornamentos</h4>
+
+                <p>@Model.Sectors</p>
+            </div>
+        </section>
+
+        <footer class="artnouveau-footer">
+            <div class="artnouveau-footer-ornament">✦ ❊ ✦</div>
+            <span>La estética de Mucha y Gaudí en formato digital</span>
+        </footer>
+
+    </div>
+
+</div>

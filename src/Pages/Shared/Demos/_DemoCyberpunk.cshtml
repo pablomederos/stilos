@@ -1,0 +1,85 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-cyberpunk-layout @($"demo-{Model.Id}")">
+    <div class="cyberpunk-noise"></div>
+    <div class="cyberpunk-grid"></div>
+    
+    <div class="cyberpunk-container">
+        <header class="cyberpunk-header">
+            <div class="cyberpunk-sys-status">
+                <span class="status-dot"></span>
+                <span>SYS.ONLINE // @Model.Id.ToUpper()</span>
+            </div>
+            <h3 class="cyberpunk-title" data-text="@Model.Name">@Model.Name</h3>
+
+            <div class="cyberpunk-subtitle">INITIALIZING ESTHETIC PROTOCOLS</div>
+        </header>
+
+        <div class="cyberpunk-main">
+            <div class="cyberpunk-panel primary-panel">
+                <div class="cyberpunk-panel-header">
+                    <span class="panel-id">SEC-01</span>
+                    <span class="panel-title">Overview</span>
+                    <span class="panel-deco"></span>
+                </div>
+                <div class="cyberpunk-panel-content">
+                    <p class="cyberpunk-text">
+                        "Neón sobre hormigón digital. Gradientes que van del magenta al cian eléctrico, tipografía glitcheada, 
+                        interfaces que parecen terminales hackeadas y fondos urbanos distópicos. Los elementos parpadean, 
+                        se distorsionan y vibran con energía frenética. Líneas de escaneo CRT, ruido visual y una 
+                        estética que dice 'el futuro ya llegó y es hermosamente caótico'."
+                    </p>
+                    <div class="cyberpunk-data-bars">
+                        <div class="cyber-bar"><div class="fill" style="width: 85%"></div></div>
+                        <div class="cyber-bar"><div class="fill" style="width: 42%"></div></div>
+                        <div class="cyber-bar glitch"><div class="fill" style="width: 95%"></div></div>
+                    </div>
+                </div>
+                <div class="cyberpunk-corner top-left"></div>
+                <div class="cyberpunk-corner top-right"></div>
+                <div class="cyberpunk-corner bottom-left"></div>
+                <div class="cyberpunk-corner bottom-right"></div>
+            </div>
+
+            <div class="cyberpunk-side">
+                <div class="cyberpunk-panel secondary-panel auth-panel">
+                    <div class="cyberpunk-panel-header">
+                        <span class="panel-id">AUTH-REQ</span>
+                    </div>
+                    <div class="cyberpunk-panel-content">
+                        <div class="cyberpunk-auth-grid">
+                            <span>UID:</span><span class="auth-value">0x7F8E</span>
+                            <span>ACCESS:</span><span class="auth-value warning">DENIED</span>
+                        </div>
+                        <button class="cyberpunk-btn">
+                            OVERRIDE
+                            <span class="btn-glitch" aria-hidden="true">OVERRIDE</span>
+                        </button>
+                    </div>
+                    <div class="cyberpunk-cut-corner"></div>
+                </div>
+                
+                <div class="cyberpunk-panel image-panel">
+                     <div class="cyberpunk-image-container">
+                        <img src="/api/img?seed=cyberpunk_neon&w=800&h=533" alt="Cyberpunk dystopian city" class="cyberpunk-image" width="800" height="533" />
+
+
+                        <div class="cyberpunk-scanline"></div>
+                        <div class="cyberpunk-data-overlay">
+                            <div class="data-row"><span>TRGT_LOCK:</span> <span class="data-value">ACQUIRED</span></div>
+                            <div class="data-row"><span>DIST:</span> <span class="data-value">2.4 KM</span></div>
+                            <div class="data-row"><span>RAD_LVL:</span> <span class="data-value warning">CRITICAL</span></div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="cyberpunk-footer">
+            <div class="footer-line">
+                <span>[ @Model.Sectors ]</span>
+                <span class="footer-code">ERR: BUFFER_OVERFLOW</span>
+            </div>
+        </footer>
+    </div>
+</div>

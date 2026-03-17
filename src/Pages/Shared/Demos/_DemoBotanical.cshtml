@@ -1,0 +1,69 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-botanical-layout @($"demo-{Model.Id}")">
+    <!-- Victorian Greenhouse Structure -->
+    <div class="botanical-glass-structure">
+        <div class="glass-pane"></div>
+        <div class="glass-pane"></div>
+        <div class="glass-pane"></div>
+        <div class="glass-pane"></div>
+    </div>
+
+    <!-- Watercolor Background Elements -->
+    <div class="botanical-watercolor-canvas">
+        <div class="wc-splash splash-emerald"></div>
+        <div class="wc-splash splash-rose"></div>
+        <div class="wc-splash splash-gold"></div>
+    </div>
+
+    <!-- Decorative Corner Ornaments -->
+    <div class="botanical-frame-ornament corn-tl"></div>
+    <div class="botanical-frame-ornament corn-tr"></div>
+    <div class="botanical-frame-ornament corn-bl"></div>
+    <div class="botanical-frame-ornament corn-br"></div>
+
+    <div class="botanical-inner-content">
+        <header class="botanical-logospace">
+            <span class="botanical-motto">Authentic Florilegium</span>
+            <h4 class="botanical-brand">Jardín <span class="ampersand-ornament">&</span> Secreto</h4>
+        </header>
+
+        <section class="botanical-showcase">
+            <div class="botanical-herbarium">
+                <div class="herbarium-plate">
+                    <div class="plate-inner">
+                        <div class="plate-image-container">
+                            <!-- Detailed Botanical Illustration - Vintage Rose/Flower -->
+                            <img src="/api/img?seed=botanical_rose&w=800&h=1000" alt="Detailed Botanical Illustration" class="herbarium-img" width="800" height="1000" />
+
+
+                        </div>
+                        <div class="plate-metadata">
+                            <h5 class="plate-latin">Rosa Gallica Officinalis</h5>
+                            <p class="plate-common">Rosal de Castilla · 1894</p>
+                        </div>
+                    </div>
+                    <!-- Decorative floating leaf/flower sketch -->
+                    <div class="floating-flora flora-1"></div>
+                </div>
+            </div>
+
+            <div class="botanical-typography-side">
+                <div class="botanical-intro">
+                    <span class="botanical-tag">Victorian Conservatory</span>
+                    <h3 class="botanical-main-title">@Model.Name</h3>
+                    <div class="floral-divider"></div>
+                </div>
+                
+                <p class="botanical-narrative">
+                    @Model.Description. Descubre la elegancia de los invernaderos de cristal, donde la ciencia y el arte se entrelazan en cada pétalo grabado a mano.
+                </p>
+
+                <div class="botanical-actions">
+                    <button class="btn-botanical-primary">Explorar Herbarium</button>
+                    <button class="btn-botanical-text">Nuestra Tradición —></button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

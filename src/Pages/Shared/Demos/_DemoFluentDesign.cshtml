@@ -1,0 +1,134 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-fluent-design @($"demo-{Model.Id}")" id="fluent-container" onmousemove="updateFluentMousePosition(event)">
+    <!-- Fake Windows 11 Desktop Background -->
+    <div class="fluent-desktop-bg"></div>
+
+    <div class="fluent-app-window">
+        <!-- Title bar -->
+        <div class="fluent-titlebar">
+            <div class="fluent-titlebar-icon">
+                <svg viewBox="0 0 16 16"><path fill="currentColor" d="M1 1h6v6H1zm0 8h6v6H1zm8-8h6v6H9zm0 8h6v6H9z"/></svg>
+            </div>
+            <div class="fluent-titlebar-text">Stilos - @Model.Name</div>
+            <div class="fluent-titlebar-controls">
+                <div class="fluent-titlebar-btn control-minimize"><svg viewBox="0 0 10 1"><path fill="currentColor" d="M0 0h10v1H0z"/></svg></div>
+                <div class="fluent-titlebar-btn control-maximize"><svg viewBox="0 0 10 10"><path fill="currentColor" d="M1 1h8v8H1V1zm1 1v6h6V2H2z"/></svg></div>
+                <div class="fluent-titlebar-btn control-close"><svg viewBox="0 0 10 10"><path fill="currentColor" d="M1.4 0L5 3.6 8.6 0 10 1.4 6.4 5 10 8.6 8.6 10 5 6.4 1.4 10 0 8.6 3.6 5 0 1.4z"/></svg></div>
+            </div>
+        </div>
+
+        <div class="fluent-app-body">
+            <!-- Sidebar with Acrylic -->
+            <nav class="fluent-sidebar fluent-acrylic">
+                <div class="fluent-search-box reveal-element">
+                    <svg class="fluent-icon" viewBox="0 0 16 16"><path fill="currentColor" d="M6.5 1.5a5 5 0 11-3.536 8.536l-3.318 3.318.707.707 3.318-3.318A5 5 0 016.5 1.5zm0 1a4 4 0 100 8 4 4 0 000-8z"/></svg>
+                    <input type="text" placeholder="Search" aria-label="Search" autocomplete="one-time-code" spellcheck="false" data-lpignore="true" data-bitwarden-watching="false" />
+                </div>
+                
+                <ul class="fluent-nav-menu">
+                    <li class="fluent-nav-item active reveal-element">
+                        <svg class="fluent-icon" viewBox="0 0 16 16"><path fill="currentColor" d="M8 1L0 8h2v7h4v-4h4v4h4V8h2L8 1zm0 1.41L14 8h-1v6H9v-4H7v4H3V8H2l6-5.59z"/></svg>
+                        <span>Home</span>
+                    </li>
+                    <li class="fluent-nav-item reveal-element">
+                        <svg class="fluent-icon" viewBox="0 0 16 16"><path fill="currentColor" d="M14 2H2v12h12V2zM1 2a1 1 0 011-1h12a1 1 0 011 1v12a1 1 0 01-1 1H2a1 1 0 01-1-1V2zm5 2H3v2h3V4zm5 0H8v2h3V4zm2 0v2h-1V4h1zM6 7H3v2h3V7zm5 0H8v2h3V7zm2 0v2h-1V7h1zM6 10H3v2h3v-2zm5 0H8v2h3v-2zm2 0v2h-1v-2h1z"/></svg>
+                        <span>Documents</span>
+                    </li>
+                    <li class="fluent-nav-item reveal-element">
+                        <svg class="fluent-icon" viewBox="0 0 16 16"><path fill="currentColor" d="M13.5 1a1.5 1.5 0 011.5 1.5v11A1.5 1.5 0 0113.5 15h-11A1.5 1.5 0 011 13.5v-11A1.5 1.5 0 012.5 1H6l2 2h5.5zm0 1H8l-2-2H2.5a.5.5 0 00-.5.5V13c0 .28.22.5.5.5h11a.5.5 0 00.5-.5v-11a.5.5 0 00-.5-.5z"/></svg>
+                        <span>Projects</span>
+                    </li>
+                    <li class="fluent-nav-item reveal-element" style="margin-top: auto;">
+                        <svg class="fluent-icon" viewBox="0 0 16 16"><path fill="currentColor" d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 1a6 6 0 110 12A6 6 0 018 2zm1 4V3H7v3H4v1h3v4h2V7h3V6H9z"/></svg>
+                        <span>Settings</span>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Main Content Area with Surface finish -->
+            <main class="fluent-content">
+                <header class="fluent-content-header">
+                    <h3 class="fluent-header-title">@Model.Name</h3>
+                    <p class="fluent-header-subtitle">Blur, Light, Depth, Material, Scale</p>
+                </header>
+                
+                <section class="fluent-grid">
+                    
+                    <div class="fluent-card reveal-element">
+                        <div class="fluent-card-content">
+                            <h4 class="fluent-subtitle">Acrylic Material</h4>
+
+                            <p class="fluent-text">
+                                @Model.Description
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="fluent-card reveal-element">
+                        <div class="fluent-card-content">
+                            <h4 class="fluent-subtitle">Inputs & Reveal</h4>
+
+                            <p class="fluent-text" style="margin-bottom: 20px;">
+                                Hover over these controls to see the light follow your cursor.
+                            </p>
+                            
+                            <!-- Toggle switch -->
+                            <div class="fluent-toggle-row">
+                                <span class="fluent-text">Enable Reveal effect</span>
+                                <label class="fluent-toggle">
+                                    <input type="checkbox" checked aria-label="Enable Reveal effect" autocomplete="off" data-lpignore="true" data-bitwarden-watching="false">
+
+                                    <span class="fluent-toggle-slider"></span>
+                                    <span class="fluent-toggle-thumb"></span>
+                                </label>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="fluent-button-row">
+                                <button class="fluent-button primary reveal-element">Save changes</button>
+                                <button class="fluent-button reveal-element">Cancel</button>
+                            </div>
+
+                            <!-- Dropdown-like select -->
+                            <div class="fluent-select reveal-element">
+                                <span>Theme: Auto (System)</span>
+                                <svg viewBox="0 0 16 16" width="12" height="12"><path fill="currentColor" d="M8 11L3 6h10l-5 5z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fluent-card reveal-element" style="grid-column: 1 / -1;">
+                        <div class="fluent-card-content">
+                            <h4 class="fluent-subtitle">Depth & Shadows</h4>
+
+                            <p class="fluent-text">
+                                In Fluent Design, shadows are not just drop shadows. They have specialized directional components and ambient components to create realistic elevation (e.g. Dialogue shadow, Flyout shadow).
+                            </p>
+                            <div class="fluent-elevated-element reveal-element">
+                                Elevated Surface (Layer)
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script>
+    function updateFluentMousePosition(e) {
+        var container = document.getElementById('fluent-container');
+        if (container) {
+            // Subtract container absolute position to get relative X/Y
+            var rect = container.getBoundingClientRect();
+            var x = e.clientX - rect.left;
+            var y = e.clientY - rect.top;
+            
+            // We set these CSS variables on the container to drive the Reveal Lighting
+            container.style.setProperty('--mouse-x', x + "px");
+            container.style.setProperty('--mouse-y', y + "px");
+        }
+    }
+</script>

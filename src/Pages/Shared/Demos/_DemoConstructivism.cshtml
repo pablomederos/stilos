@@ -1,0 +1,72 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-constructivism-layout @($"demo-{Model.Id}")">
+
+    <div class="constructivism-page">
+
+        <div class="constructivism-diagonal-bar"></div>
+
+        <header class="constructivism-header">
+            <div class="constructivism-header-bar"></div>
+            <nav class="constructivism-nav">
+                <span class="constructivism-nav-item active">МАНИФЕСТ</span>
+                <span class="constructivism-nav-item">АРХИВ</span>
+                <span class="constructivism-nav-item">РАБОТЫ</span>
+            </nav>
+        </header>
+
+        <section class="constructivism-hero">
+            <div class="constructivism-hero-text">
+                <div class="constructivism-overline">
+                    <span class="constructivism-overline-bar"></span>
+                    ВПЕРЁД — EL DISEÑO AL SERVICIO DE LA FUNCIÓN
+                </div>
+                <h3 class="constructivism-title">@Model.Name.ToUpper()</h3>
+                <p class="constructivism-subtitle">@Model.Description</p>
+            </div>
+            <div class="constructivism-hero-photo">
+                <div class="constructivism-collage">
+                    <img src="/images/demos/constructivism_1.png" alt="Base structure" class="constructivism-photo base-photo" width="640" height="640" />
+
+                    <img src="/images/demos/constructivism_2.png" alt="Steel beams" class="constructivism-photo element-1" width="640" height="640" />
+
+                    <img src="/images/demos/constructivism_3.png" alt="Industrial elements" class="constructivism-photo element-2" width="640" height="640" />
+
+                    <div class="constructivism-photo-red-shape"></div>
+                    <div class="constructivism-photo-black-band"></div>
+                    <div class="constructivism-text-cutout">ИНДУСТРИЯ</div>
+                    <div class="constructivism-photo-overlay"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="constructivism-blocks">
+            <div class="constructivism-block constructivism-block-red">
+                <span class="constructivism-block-num">01</span>
+                <h4>ДИНАМИКА</h4>
+
+                <p>La composición diagonal fuerza el movimiento ocular. Nada descansa en la horizontalidad pasiva.</p>
+            </div>
+            <div class="constructivism-block constructivism-block-black">
+                <span class="constructivism-block-num">02</span>
+                <h4>CONSTRUCCIÓN</h4>
+
+                <p>La tipografía es material de construcción. Las letras se apilan como vigas de acero industrial.</p>
+            </div>
+            <div class="constructivism-block constructivism-block-accent">
+                <span class="constructivism-block-num">03</span>
+                <h4>PROPÓSITO</h4>
+
+                <p>@Model.Emotion</p>
+            </div>
+        </section>
+
+        <footer class="constructivism-footer">
+            <div class="constructivism-footer-bar"></div>
+            <span class="constructivism-footer-label">@Model.Sectors</span>
+            <div class="constructivism-footer-bar"></div>
+        </footer>
+
+    </div>
+
+</div>

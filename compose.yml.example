@@ -1,0 +1,13 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - RateLimiting__BurstMax=${RATE_LIMITING_BURST_MAX:-100}
+      - RateLimiting__TokensPerRefresh=${RATE_LIMITING_TOKENS_PER_REFRESH:-30}
+      - RateLimiting__RefreshInterval=${RATE_LIMITING_REFRESH_INTERVAL:-00:00:05}
+    restart: unless-stopped

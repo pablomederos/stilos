@@ -1,0 +1,53 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-jpmin-layout @($"demo-{Model.Id}")">
+
+    <div class="jpmin-page">
+
+        <div class="jpmin-washi-texture"></div>
+        <div class="jpmin-enso"></div>
+
+        <header class="jpmin-header">
+            <div class="jpmin-hanko">禅</div>
+            <nav class="jpmin-nav">
+                <a href="#">庭</a>
+                <a href="#">茶</a>
+                <a href="#">道</a>
+            </nav>
+        </header>
+
+        <section class="jpmin-hero">
+            <div class="jpmin-vertical-title">@Model.Name</div>
+            <div class="jpmin-hero-content">
+                <h3 class="jpmin-title">@Model.Name</h3>
+                <div class="jpmin-separator"></div>
+                <p class="jpmin-subtitle">@Model.Description</p>
+            </div>
+        </section>
+
+        <section class="jpmin-gallery">
+            <div class="jpmin-image-frame">
+                <img src="/api/img?seed=zen1&w=600&h=400" alt="Zen composition" class="jpmin-image" width="600" height="400" />
+
+            </div>
+        </section>
+
+        <section class="jpmin-philosophy">
+            <div class="jpmin-ma-block">
+                <span class="jpmin-kanji">間</span>
+                <p class="jpmin-wisdom">El espacio vacío no es ausencia. Es una presencia sustancial que invita a la contemplación.</p>
+            </div>
+            <div class="jpmin-ma-block">
+                <span class="jpmin-kanji">侘</span>
+                <p class="jpmin-wisdom">@Model.Emotion</p>
+            </div>
+        </section>
+
+        <footer class="jpmin-footer">
+            <div class="jpmin-footer-line"></div>
+            <span class="jpmin-footer-text">@Model.Sectors</span>
+        </footer>
+
+    </div>
+
+</div>

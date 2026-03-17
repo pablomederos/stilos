@@ -1,0 +1,82 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-horror-layout @($"demo-{Model.Id}")">
+    <div class="horror-rust-layer"></div>
+    <div class="horror-vhs-layer"></div>
+    <div class="horror-vignette"></div>
+    <div class="horror-blood-drip"></div>
+    <div class="horror-creeping-shadow"></div>
+    
+    <div class="horror-content">
+        <header class="horror-header">
+            <h3 class="horror-title" data-text="@Model.Name">@Model.Name</h3>
+            <div class="horror-subtitle uncanny-text">
+                <span>I</span><span>T</span> <span>S</span><span>E</span><span>E</span><span>S</span> <span>Y</span><span>O</span><span>U</span>
+            </div>
+        </header>
+
+        <main class="horror-main">
+            <section class="horror-warning-box">
+                <div class="warning-icon">⚠</div>
+                <div class="warning-text">
+                    <p class="terminal-text glitch-text" data-text="SYSTEM CORRUPTION DETECTED.">
+                        SYSTEM CORRUPTION DETECTED.
+                        ENTITY CONTAINMENT FAILURE.
+                        DO NOT LOOK DIRECTLY AT THE ANOMALY.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="horror-ritual-circle">
+                <div class="ritual-bg"></div>
+                <div class="ritual-center">
+                    <img src="/api/img?seed=horror_anomaly&w=400&h=400&grayscale=true" alt="Anomaly" class="horror-image" width="400" height="400" />
+
+                    <div class="horror-glitch-overlay"></div>
+                </div>
+            </section>
+
+            <section class="horror-journal">
+                <h4 class="journal-date terminal-text">REC: 1989-10-31 03:33AM</h4>
+
+                <p class="journal-entry">
+                    "The walls are breathing again. The color red is louder than it was yesterday. 
+                    I keep finding my own handwriting in places I've never been. 
+                    If you are reading this, <span class="blood-text">do not trust the light.</span>"
+                </p>
+                <div class="horror-eye-container"><div class="horror-eye"></div></div>
+                <button class="horror-btn">
+                    <span class="btn-glitch-layer shadow">ACCEPT FATE</span>
+                    <span class="btn-glitch-layer main">ACCEPT FATE</span>
+                    <span class="btn-glitch-layer highlight">ACCEPT FATE</span>
+                </button>
+            </section>
+        </main>
+    </div>
+</div>
+
+<script>
+    // Script simple para añadir algo de "horror" procedimental en los span uncannys
+    document.addEventListener("DOMContentLoaded", function() {
+        const uncannySpans = document.querySelectorAll('.uncanny-text span');
+        uncannySpans.forEach(span => {
+            if (span.innerText.trim() !== "") {
+                const randomRot = (Math.random() * 6 - 3).toFixed(1); // entre -3deg y 3deg
+                const randomY = (Math.random() * 4 - 2).toFixed(1); // entre -2px y 2px
+                span.style.setProperty('--r', `${randomRot}deg`);
+                span.style.setProperty('--y', `${randomY}px`);
+                span.style.display = 'inline-block';
+                span.style.transform = `rotate(var(--r)) translateY(var(--y))`;
+            }
+        });
+        
+        // Random glitch intervals
+        const glitchElement = document.querySelector('.horror-glitch-overlay');
+        setInterval(() => {
+            if(Math.random() > 0.8) {
+                glitchElement.style.opacity = '1';
+                setTimeout(() => { glitchElement.style.opacity = '0'; }, 150 + Math.random() * 200);
+            }
+        }, 1000);
+    });
+</script>

@@ -1,0 +1,50 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-saas @($"demo-{Model.Id}")" id="saas-demo">
+    <button class="saas-drawer-toggle" aria-label="Toggle menu" onclick="toggleSaasDrawer()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="saas-sidebar">
+        <div class="saas-logo"></div>
+        <nav class="saas-nav">
+            <div class="saas-nav-item active">Dashboard</div>
+            <div class="saas-nav-item">Analytics</div>
+            <div class="saas-nav-item">Settings</div>
+        </nav>
+    </div>
+    <div class="saas-main">
+        <header class="saas-header">
+            <h3>@Model.Name Dashboard</h3>
+
+            <div class="saas-user-profile"></div>
+        </header>
+        <div class="saas-content">
+            <div class="saas-stats-grid">
+                <div class="saas-stat-card">
+                    <span class="stat-label">Total Users</span>
+                    <span class="stat-value">12,450</span>
+                </div>
+                <div class="saas-stat-card">
+                    <span class="stat-label">Revenue</span>
+                    <span class="stat-value">$45,200</span>
+                </div>
+                <div class="saas-stat-card">
+                    <span class="stat-label">Active</span>
+                    <span class="stat-value">8,120</span>
+                </div>
+            </div>
+            <div class="saas-chart-section">
+                <div class="saas-chart-mock"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleSaasDrawer() {
+        const wrapper = document.getElementById('saas-demo');
+        wrapper.classList.toggle('saas-drawer-open');
+    }
+</script>

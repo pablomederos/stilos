@@ -1,0 +1,115 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-dark-ui @($"demo-{Model.Id}")">
+    <div class="darkui-sidebar">
+        <div class="darkui-logo">
+            <div class="logo-inner"></div>
+        </div>
+        <nav class="darkui-nav">
+            <div class="darkui-nav-item active">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">Overview</span>
+            </div>
+            <div class="darkui-nav-item">
+                <span class="nav-icon">⚡</span>
+                <span class="nav-text">Performance</span>
+            </div>
+            <div class="darkui-nav-item">
+                <span class="nav-icon">🛡️</span>
+                <span class="nav-text">Security</span>
+            </div>
+            <div class="darkui-nav-item">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-text">Settings</span>
+            </div>
+        </nav>
+        <div class="darkui-sidebar-footer">
+            <div class="darkui-user-pill">
+                <div class="user-avatar"></div>
+                <div class="user-info">
+                    <span class="user-name">User_01</span>
+                    <span class="user-status">Pro Node</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="darkui-main">
+        <header class="darkui-header">
+            <div class="header-left">
+                <span class="breadcrumb">System / <strong>Terminal</strong></span>
+            </div>
+            <div class="header-right">
+                <div class="status-indicator">
+                    <span class="status-pulse"></span>
+                    System Active
+                </div>
+            </div>
+        </header>
+        <div class="darkui-body">
+            <div class="darkui-welcome">
+                <h3>Welcome back, <span class="text-glow">NightCrawler</span></h3>
+                <p>Your workspace is optimized for maximum focus.</p>
+            </div>
+            
+            <div class="darkui-stats">
+                <div class="darkui-stat-card card-cyan">
+                    <div class="card-glow"></div>
+                    <div class="stat-header">
+                        <span class="stat-icon">💠</span>
+                        <span class="stat-label">Network Load</span>
+                    </div>
+                    <div class="stat-value">42.8%</div>
+                    <div class="stat-chart">
+                        <div class="chart-bar" style="width: 70%"></div>
+                    </div>
+                </div>
+                <div class="darkui-stat-card card-violet">
+                    <div class="card-glow"></div>
+                    <div class="stat-header">
+                        <span class="stat-icon">🔮</span>
+                        <span class="stat-label">Neural Logic</span>
+                    </div>
+                    <div class="stat-value">Active</div>
+                    <div class="stat-chart">
+                        <div class="chart-bar" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="darkui-stat-card card-emerald">
+                    <div class="card-glow"></div>
+                    <div class="stat-header">
+                        <span class="stat-icon">❇️</span>
+                        <span class="stat-label">Energy Efficiency</span>
+                    </div>
+                    <div class="stat-value">98.2</div>
+                    <div class="stat-chart">
+                        <div class="chart-bar" style="width: 95%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="darkui-module">
+                <div class="module-header">
+                    <h4>Active Processes</h4>
+
+                    <div class="module-actions">
+                        <span class="action-btn">Refresh</span>
+                    </div>
+                </div>
+                <div class="module-content">
+                    <div class="process-item">
+                        <div class="process-name">Background Worker</div>
+                        <div class="process-status emerald">Running</div>
+                    </div>
+                    <div class="process-item">
+                        <div class="process-name">Data Synchronization</div>
+                        <div class="process-status cyan">Standby</div>
+                    </div>
+                    <div class="process-item">
+                        <div class="process-name">Encryption Layer</div>
+                        <div class="process-status violet">Active</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

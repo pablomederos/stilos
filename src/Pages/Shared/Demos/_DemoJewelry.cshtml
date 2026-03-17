@@ -1,0 +1,46 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-jewelry @($"demo-{Model.Id}")">
+    <div class="jewelry-ambient-light"></div>
+    <div class="jewelry-particles"></div>
+    
+    <div class="jewelry-container">
+        <!-- Vitrina de cristal premium -->
+        <div class="jewelry-showcase">
+            <header class="jewelry-header">
+                <div class="jewelry-brand">
+                    <span class="jewelry-brand-name">@Model.Name</span>
+                    <span class="jewelry-brand-subtitle">Haute Joaillerie</span>
+                </div>
+            </header>
+
+            <div class="jewelry-content">
+                <div class="jewelry-image-container">
+                    <div class="jewelry-spotlight">
+                        <div class="jewelry-product-image"></div>
+                    </div>
+                </div>
+
+                <div class="jewelry-details">
+                    <h3 class="jewelry-category">Colección Exclusiva</h3>
+
+                    <h4 class="jewelry-title">
+
+                        <span class="jewelry-metallic-text">L'Étoile du Soir</span>
+                    </h4>
+                    <p class="jewelry-description">
+                        @Model.Description
+                    </p>
+                    <div class="jewelry-price-container">
+                        <span class="jewelry-price-label">Valor estimado</span>
+                        <span class="jewelry-price">$45,000</span>
+                    </div>
+                    <button class="jewelry-btn">
+                        <span class="jewelry-btn-text">Descubrir la pieza</span>
+                        <div class="jewelry-btn-shimmer"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

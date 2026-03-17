@@ -1,0 +1,48 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-swiss @($"demo-{Model.Id}")">
+    <div class="swiss-grid-container">
+        <header class="swiss-header">
+            <div class="swiss-id">SYSTEM-7</div>
+            <div class="swiss-branding">INTERNATIONAL SYSTEM</div>
+            <div class="swiss-lang">EN / DE / FR</div>
+        </header>
+
+        <section class="swiss-hero">
+            <h3 class="swiss-main-title">@Model.Name.ToUpper()</h3>
+            <div class="swiss-hero-meta">
+                <span class="swiss-tag">STRUCTURE</span>
+                <span class="swiss-tag">OBJECTIVITY</span>
+            </div>
+        </section>
+
+        <div class="swiss-content-grid">
+            <article class="swiss-main-content">
+                <p class="swiss-lead">@Model.Description</p>
+                <div class="swiss-visual-block"></div>
+                <div class="swiss-text-columns">
+                    <p>The International Typographic Style, also known as the Swiss Style, is a graphic design style that emerged in Russia, Germany, and Netherlands in the 1920s and was further developed by designers in Switzerland during the 1950s.</p>
+                    <p>It emphasizes cleanliness, readability, and objectivity. Hallmarks of the style are asymmetric layouts, use of a grid, sans-serif typefaces like Akzidenz-Grotesk, and flush-left, ragged-right text.</p>
+                </div>
+            </article>
+
+            <aside class="swiss-sidebar">
+                <div class="swiss-data-box">
+                    <h4>TECHNICAL SPECS</h4>
+
+                    <ul class="swiss-data-list">
+                        <li><strong>GRID:</strong> 12 COL MODULAR</li>
+                        <li><strong>TYPE:</strong> NEO-GROTESQUE</li>
+                        <li><strong>AXIS:</strong> ASYMMETRIC</li>
+                    </ul>
+                </div>
+                <div class="swiss-secondary-visual"></div>
+            </aside>
+        </div>
+
+        <footer class="swiss-footer">
+            <div class="swiss-copyright">© @DateTime.Now.Year INSTITUTIONAL DIVISION</div>
+            <div class="swiss-location">ZÜRICH / BASEL</div>
+        </footer>
+    </div>
+</div>

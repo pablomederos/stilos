@@ -1,0 +1,59 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-pixelart-layout @($"demo-{Model.Id}")">
+    <!-- CRT Scanline overlay -->
+    <div class="pixelart-scanlines"></div>
+    
+    <div class="pixelart-container">
+        <header class="pixelart-header">
+            <div class="pixelart-logo">
+                <span class="pixel-color-1">P</span><span class="pixel-color-2">I</span><span class="pixel-color-3">X</span><span class="pixel-color-4">E</span><span class="pixel-color-1">L</span>
+                <span> OS</span>
+            </div>
+            <div class="pixelart-score">SCORE: 099900</div>
+        </header>
+
+        <section class="pixelart-main">
+            <div class="pixelart-dialog-box">
+                <div class="pixelart-dialog-title">▶ COMUNICADO SISTEMA...</div>
+                <div class="pixelart-dialog-content">
+                    <p class="pixelart-dialog-text typewriter-effect">
+                        > @Model.Name INIT...<br><br>
+                        @Model.Description
+                    </p>
+                    
+                    <div class="pixelart-actions">
+                        <button class="pixelart-btn btn-primary">START</button>
+                        <button class="pixelart-btn btn-secondary">SELECT</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pixelart-inventory-grid">
+                <div class="pixelart-item-slot active">A</div>
+                <div class="pixelart-item-slot">B</div>
+                <div class="pixelart-item-slot">C</div>
+                <div class="pixelart-item-slot">D</div>
+                <div class="pixelart-item-slot locked">
+                    <div class="pixel-lock">?</div>
+                </div>
+                <div class="pixelart-item-slot locked">
+                    <div class="pixel-lock">?</div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="pixelart-footer">
+            <div class="pixelart-health-bar">
+                <span>HP</span>
+                <div class="health-blocks">
+                    <div class="hp-block full"></div>
+                    <div class="hp-block full"></div>
+                    <div class="hp-block full"></div>
+                    <div class="hp-block empty"></div>
+                </div>
+            </div>
+            <div class="pixel-blinking-text">INSERT COIN</div>
+        </footer>
+    </div>
+</div>

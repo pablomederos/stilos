@@ -1,0 +1,65 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-surrealism-layout @($"demo-{Model.Id}")">
+
+    <div class="surrealism-page">
+
+        <div class="surrealism-sky"></div>
+
+        <header class="surrealism-header">
+            <span class="surrealism-brand">Magritte & Dalí</span>
+            <nav class="surrealism-nav">
+                <a href="#">rêves</a>
+                <a href="#">miroirs</a>
+                <a href="#">l'inconscient</a>
+            </nav>
+        </header>
+
+        <section class="surrealism-hero">
+            <div class="surrealism-floating-object surrealism-float-1">
+                <img src="/images/demos/surreal_1.png" alt="Surreal clock" width="400" height="400" />
+
+            </div>
+            <div class="surrealism-floating-object surrealism-float-2">
+                <img src="/images/demos/surreal_2.png" alt="Surreal eye" width="400" height="400" />
+
+            </div>
+            <div class="surrealism-hero-text">
+                <h3 class="surrealism-title">@Model.Name</h3>
+                <p class="surrealism-subtitle">@Model.Description</p>
+                <div class="surrealism-decoration-text">L'inconscient est structuré comme un langage</div>
+            </div>
+            <div class="surrealism-giant-element">
+                <img src="/images/demos/surreal_3.png" alt="Surreal landscape" class="surrealism-giant-img" width="640" height="640" />
+
+
+            </div>
+        </section>
+
+        <section class="surrealism-content">
+            <div class="surrealism-card surrealism-card-melt">
+                <h4>La persistencia del tiempo</h4>
+
+                <p>Los relojes se derriten sobre los elementos de la interfaz. La gravedad es opcional. El scroll mueve las cosas lateral e inesperadamente.</p>
+            </div>
+            <div class="surrealism-card surrealism-card-invert">
+                <h4>Ceci n'est pas un bouton</h4>
+
+                <p>Las cosas no son lo que parecen. Un botón puede ser una puerta, una puerta una ventana al subconsciente digital.</p>
+            </div>
+            <div class="surrealism-card surrealism-card-dream">
+                <h4>@Model.Emotion</h4>
+
+                <p>@Model.Sectors</p>
+            </div>
+        </section>
+
+        <footer class="surrealism-footer">
+            <div class="surrealism-footer-line"></div>
+            <span class="surrealism-footer-text">ceci n'est pas un footer</span>
+            <div class="surrealism-footer-line"></div>
+        </footer>
+
+    </div>
+
+</div>

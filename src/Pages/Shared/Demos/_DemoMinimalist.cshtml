@@ -1,0 +1,22 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-minimalist @($"demo-{Model.Id}")">
+    <div class="minimalist-container">
+        <nav class="minimalist-nav">
+            <div class="minimalist-logo"></div>
+            <div class="minimalist-menu">
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <main class="minimalist-main">
+            <h3 class="minimalist-title">@Model.Name</h3>
+            <p class="minimalist-subtitle">@Model.Description</p>
+            <div class="minimalist-visual"></div>
+            <footer class="minimalist-footer">
+                <span class="minimalist-year">@DateTime.Now.Year</span>
+                <span class="minimalist-label">Fine Design</span>
+            </footer>
+        </main>
+    </div>
+</div>

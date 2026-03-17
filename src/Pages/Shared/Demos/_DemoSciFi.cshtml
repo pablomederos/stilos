@@ -1,0 +1,134 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-scifi-layout @($"demo-{Model.Id}")">
+    <div class="scifi-stars"></div>
+    <div class="scifi-stars2"></div>
+    <div class="scifi-grid"></div>
+
+    <div class="scifi-hud-container">
+        <!-- Top HUD Header -->
+        <header class="scifi-header">
+            <div class="scifi-corner scifi-corner-tl"></div>
+            <div class="scifi-corner scifi-corner-tr"></div>
+            
+            <div class="scifi-header-left">
+                <span class="scifi-ship-id">USCSS // ORION</span>
+                <div class="scifi-status-bar">
+                    <span class="status-indicator"></span>
+                    <span>ONLINE</span>
+                </div>
+            </div>
+            
+            <div class="scifi-header-center">
+                <h3 class="scifi-title">@Model.Name.ToUpper()</h3>
+
+            </div>
+            
+            <div class="scifi-header-right">
+                <span class="scifi-time" id="scifi-clock">T-MINUS 00:00:00</span>
+                <span class="scifi-warning">AWAITING CMD</span>
+            </div>
+        </header>
+
+        <!-- Main HUD Working Area -->
+        <main class="scifi-main">
+            <!-- Left Data Panel -->
+            <aside class="scifi-panel scifi-panel-left">
+                <div class="scifi-panel-title">SYSTEM_DIAGNOSTICS</div>
+                
+                <div class="scifi-diag-item">
+                    <span>CORE_TEMP</span>
+                    <span class="value amber">4,200K</span>
+                    <div class="scifi-progress"><div class="fill amber-fill" style="width:78%"></div></div>
+                </div>
+                <div class="scifi-diag-item">
+                    <span>HULL_INTEGRITY</span>
+                    <span class="value cyan">100%</span>
+                    <div class="scifi-progress"><div class="fill cyan-fill" style="width:100%"></div></div>
+                </div>
+                <div class="scifi-diag-item">
+                    <span>LIFE_SUPPORT</span>
+                    <span class="value cyan">NOMINAL</span>
+                    <div class="scifi-progress"><div class="fill cyan-fill" style="width:95%"></div></div>
+                </div>
+
+                <div class="scifi-radial-wrapper">
+                    <div class="scifi-radial-scanner">
+                        <div class="scanner-sweep"></div>
+                        <div class="scanner-target"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Center Content -->
+            <section class="scifi-panel scifi-content-panel">
+                <div class="scifi-crosshair-tl"></div>
+                <div class="scifi-crosshair-tr"></div>
+                <div class="scifi-crosshair-bl"></div>
+                <div class="scifi-crosshair-br"></div>
+                
+                <div class="scifi-content-header">
+                    <h4 class="scifi-heading-logs">DATA_LOG // SECTOR_7G</h4>
+
+                </div>
+                <div class="scifi-content-body">
+                    <p class="scifi-type-text">
+                        "Interfaces que parecen extraídas de la cabina de una nave espacial. 
+                        Elementos HUD translúcidos, indicadores radiales, rejillas de datos 
+                        y una paleta dominada por azules profundos, blancos fríos y acentos 
+                        de alerta en ámbar. La tipografía es monoespaciada y técnica. 
+                        Todo transmite precisión instrumental y la vastedad del cosmos."
+                    </p>
+                    <div class="scifi-data-grid">
+                        <div class="data-cell"><span>SCTR</span><br/>7G-88</div>
+                        <div class="data-cell"><span>YLD</span><br/>99.2%</div>
+                        <div class="data-cell amber-cell"><span>WARN</span><br/>RAD_ANM</div>
+                        <div class="data-cell"><span>STAT</span><br/>STBL</div>
+                    </div>
+                </div>
+            </section>
+            <!-- Right Data Panel -->
+            <aside class="scifi-panel scifi-panel-right">
+                <div class="scifi-panel-title">ORBITAL_TELEMETRY</div>
+                <table class="scifi-telemetry-table">
+                    <thead>
+                        <tr>
+                            <th>AXIS</th>
+                            <th>COORD</th>
+                            <th>DEV</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>X</td><td class="cyan-text">145.892</td><td>+0.01</td></tr>
+                        <tr><td>Y</td><td class="cyan-text">093.111</td><td>-0.05</td></tr>
+                        <tr class="alert-row"><td>Z</td><td class="amber-text">881.002</td><td class="amber-text">+4.22</td></tr>
+                        <tr><td>V</td><td class="cyan-text">0.992c</td><td>---</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="scifi-panel-title" style="margin-top: 2rem;">SYS_LOG</div>
+                <div class="scifi-mini-log">
+                    <div class="log-entry">SEQ 01 ... <span class="cyan-text">NOMINAL</span></div>
+                    <div class="log-entry">SEQ 02 ... <span class="cyan-text">NOMINAL</span></div>
+                    <div class="log-entry alert-blinker">SEQ 03 ... <span class="amber-text">WARN: FLUX</span></div>
+                    <div class="log-entry">SEQ 04 ... <span class="cyan-text">NOMINAL</span></div>
+                </div>
+            </aside>
+        </main>
+        
+        <!-- Bottom HUD Actions -->
+        <footer class="scifi-footer">
+            <div class="scifi-corner scifi-corner-bl"></div>
+            <div class="scifi-corner scifi-corner-br"></div>
+            <div class="scifi-action-logs">
+                <div class="log-line">> Establishing secure connection... [OK]</div>
+                <div class="log-line">> Downloading telemetry data... [OK]</div>
+                <div class="log-line blink">> _</div>
+            </div>
+            <div class="scifi-actions">
+                <button class="scifi-btn">ENGAGE</button>
+                <button class="scifi-btn scifi-btn-secondary">ABORT</button>
+            </div>
+        </footer>
+    </div>
+</div>

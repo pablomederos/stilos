@@ -1,0 +1,23 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-papercut @($"demo-{Model.Id}")">
+    <header class="papercut-header">
+        <h3 class="papercut-title">@Model.Name</h3>
+        <p class="papercut-tagline">@Model.Emotion – @Model.Sectors</p>
+    </header>
+    <section class="papercut-hero">
+        <div class="papercut-hero-visual">
+            <img src="/api/img?seed=papercut_hero&w=800&h=600" alt="Paper cut hero image" width="800" height="600" />
+
+        </div>
+        <div class="papercut-hero-content">
+            <h4 class="papercut-hero-title">¡Cortes de Papel y Texturas!</h4>
+            <p class="papercut-hero-subtitle">Capas recortadas, sombras delicadas y una estética artesanal.</p>
+            <button class="papercut-btn-primary">Explorar</button>
+            <button class="papercut-btn-secondary">Ver Demo</button>
+        </div>
+    </section>
+    <footer class="papercut-footer">
+        <span class="papercut-footer-text">© @Model.Name – Todos los derechos reservados</span>
+    </footer>
+</div>

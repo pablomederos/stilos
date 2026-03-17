@@ -1,0 +1,24 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-editorial @($"demo-{Model.Id}")">
+    <article class="editorial-article">
+        <header class="editorial-hero">
+            <span class="editorial-category">CULTURE & DESIGN</span>
+            <h3 class="editorial-title">@Model.Name</h3>
+            <p class="editorial-subtitle">@Model.Description</p>
+            <div class="editorial-meta">By Editor in Chief — @DateTime.Now.ToString("MMM dd, yyyy")</div>
+        </header>
+        <div class="editorial-body">
+            <div class="editorial-column-main">
+                <p class="editorial-lead"><span class="drop-cap">E</span>xploring the nuances of @Model.Emotion through the lens of modern typography and asymmetrical grids. The design language speaks volumes without making a sound.</p>
+                <div class="editorial-image-mock"></div>
+                <p>Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Etiam porta sem malesuada magna mollis euismod.</p>
+            </div>
+            <aside class="editorial-sidebar">
+                <blockquote class="editorial-pull-quote">
+                    "Design is not just what it looks like and feels like. Design is how it works."
+                </blockquote>
+            </aside>
+        </div>
+    </article>
+</div>

@@ -1,0 +1,59 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-grunge-layout @($"demo-{Model.Id}")">
+    <div class="grunge-texture-overlay"></div>
+    <div class="grunge-noise"></div>
+
+    <header class="grunge-header">
+        <div class="grunge-duct-tape tape-1"></div>
+        <h3 class="grunge-logo">
+
+            <span class="grunge-logo-bg">FANZINE</span><br/>
+            <span class="grunge-logo-fg">UNDERGROUND</span>
+        </h3>
+
+        <div class="grunge-ink-stain"></div>
+    </header>
+
+    <main class="grunge-main">
+        <article class="grunge-article">
+            <div class="grunge-paper-scrap">
+                <h3 class="grunge-title">@Model.Name</h3>
+
+                <p class="grunge-description">
+                    @Model.Description
+                </p>
+            </div>
+            
+            <div class="grunge-image-container">
+                <div class="grunge-duct-tape tape-2"></div>
+                <!-- Black and white, grungy image from unsplash -->
+                <img src="/api/img?seed=grunge&w=800&h=600&grayscale=true" alt="Punk band or grunge scene" class="grunge-photo" width="800" height="600" />
+
+                <div class="grunge-photo-filter"></div>
+            </div>
+        </article>
+
+        <section class="grunge-sidebar">
+            <div class="grunge-manifesto">
+                <h4>// MANIFIESTO</h4>
+
+                <ul>
+                    <li>DO IT YOURSELF.</li>
+                    <li>NO RULES.</li>
+                    <li>STAY RAW.</li>
+                    <li>F*CK THE GRID.</li>
+                </ul>
+            </div>
+            
+            <button class="grunge-btn">
+                <span>Únete al caos</span>
+                <div class="grunge-btn-bg"></div>
+            </button>
+        </section>
+    </main>
+
+    <footer class="grunge-footer">
+        <span class="grunge-stamp">EST. 1992 // LATE NIGHT EDITIONS</span>
+    </footer>
+</div>

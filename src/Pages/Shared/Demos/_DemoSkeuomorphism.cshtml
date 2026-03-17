@@ -1,0 +1,168 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-skeuomorphism @($"demo-{Model.Id}")">
+    <div class="skeuo-synth-desk">
+        
+        <!-- Hardware Unit -->
+        <div class="skeuo-hardware-unit">
+            
+            <!-- Wood side panels -->
+            <div class="skeuo-wood-side left"></div>
+            <div class="skeuo-wood-side right"></div>
+
+            <!-- Brushed Metal Front Panel -->
+            <div class="skeuo-metal-panel">
+                
+                <!-- Screws -->
+                <div class="skeuo-screw top-left"><div class="skeuo-screw-slot"></div></div>
+                <div class="skeuo-screw top-right"><div class="skeuo-screw-slot"></div></div>
+                <div class="skeuo-screw bottom-left"><div class="skeuo-screw-slot"></div></div>
+                <div class="skeuo-screw bottom-right"><div class="skeuo-screw-slot"></div></div>
+
+                <div class="skeuo-branding">
+                    <h3 class="skeuo-brand-logo">SKEUO<span class="skeuo-brand-model">-TRON 808</span></h3>
+
+                    <p class="skeuo-brand-desc">Virtual Analog Synthesizer</p>
+                </div>
+
+                <div class="skeuo-dashboard-grid">
+                    
+                    <!-- LED Display Screen -->
+                    <div class="skeuo-section screen-section">
+                        <div class="skeuo-display-bezel">
+                            <div class="skeuo-screen">
+                                <div class="skeuo-screen-glare"></div>
+                                <div class="skeuo-screen-text">
+                                    <div class="skeuo-screen-row">
+                                        <span class="skeuo-label">PRG</span> <span class="skeuo-value">01</span>
+                                    </div>
+                                    <div class="skeuo-screen-row">
+                                        <span class="skeuo-label">WAVE</span> <span class="skeuo-value neon-glow">SAW</span>
+                                    </div>
+                                    <div class="skeuo-screen-row text-scrolling">
+                                        @Model.Description
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Knobs Section -->
+                    <div class="skeuo-section knobs-section">
+                        <div class="skeuo-group-label">FILTER ENVELOPE</div>
+                        <div class="skeuo-knobs-row">
+                            <div class="skeuo-knob-container">
+                                <div class="skeuo-knob" style="transform: rotate(-100deg);">
+                                    <div class="skeuo-knob-indicator"></div>
+                                    <div class="skeuo-knob-grip"></div>
+                                </div>
+                                <span class="skeuo-knob-label">ATTACK</span>
+                            </div>
+                            <div class="skeuo-knob-container">
+                                <div class="skeuo-knob" style="transform: rotate(20deg);">
+                                    <div class="skeuo-knob-indicator"></div>
+                                    <div class="skeuo-knob-grip"></div>
+                                </div>
+                                <span class="skeuo-knob-label">DECAY</span>
+                            </div>
+                            <div class="skeuo-knob-container">
+                                <div class="skeuo-knob" style="transform: rotate(120deg);">
+                                    <div class="skeuo-knob-indicator"></div>
+                                    <div class="skeuo-knob-grip"></div>
+                                </div>
+                                <span class="skeuo-knob-label">SUSTAIN</span>
+                            </div>
+                            <div class="skeuo-knob-container">
+                                <div class="skeuo-knob" style="transform: rotate(-40deg);">
+                                    <div class="skeuo-knob-indicator"></div>
+                                    <div class="skeuo-knob-grip"></div>
+                                </div>
+                                <span class="skeuo-knob-label">RELEASE</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Switches Section -->
+                    <div class="skeuo-section switches-section">
+                        <div class="skeuo-group-label">MASTER</div>
+                        <div class="skeuo-switches-row">
+                            <div class="skeuo-switch-container">
+                                <div class="skeuo-switch skeuo-switch-on">
+                                    <div class="skeuo-switch-lever"></div>
+                                    <div class="skeuo-switch-shadow"></div>
+                                </div>
+                                <span class="skeuo-switch-label">POWER</span>
+                                <div class="skeuo-led-indicator on"></div>
+                            </div>
+                            <div class="skeuo-switch-container">
+                                <div class="skeuo-switch skeuo-switch-off">
+                                    <div class="skeuo-switch-lever"></div>
+                                    <div class="skeuo-switch-shadow"></div>
+                                </div>
+                                <span class="skeuo-switch-label">SYNC</span>
+                                <div class="skeuo-led-indicator off"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="skeuo-dashboard-grid" style="margin-top: 2rem;">
+                    <!-- Faders Section -->
+                    <div class="skeuo-section faders-section" style="grid-column: 1 / -1; width: 100%;">
+                        <div class="skeuo-group-label" style="margin-bottom: 2rem;">MASTER MIXER</div>
+                        <div class="skeuo-faders-container">
+                            <!-- Fader 1 -->
+                            <div class="skeuo-fader-channel">
+                                <div class="skeuo-fader-track">
+                                    <div class="skeuo-fader-thumb" style="bottom: 70%;">
+                                        <div class="skeuo-fader-line"></div>
+                                    </div>
+                                </div>
+                                <span class="skeuo-knob-label">CH 1</span>
+                            </div>
+                            <!-- Fader 2 -->
+                            <div class="skeuo-fader-channel">
+                                <div class="skeuo-fader-track">
+                                    <div class="skeuo-fader-thumb" style="bottom: 40%;">
+                                        <div class="skeuo-fader-line"></div>
+                                    </div>
+                                </div>
+                                <span class="skeuo-knob-label">CH 2</span>
+                            </div>
+                            <!-- Fader 3 -->
+                            <div class="skeuo-fader-channel">
+                                <div class="skeuo-fader-track">
+                                    <div class="skeuo-fader-thumb" style="bottom: 85%;">
+                                        <div class="skeuo-fader-line"></div>
+                                    </div>
+                                </div>
+                                <span class="skeuo-knob-label">SUB</span>
+                            </div>
+                            <!-- Fader 4 -->
+                            <div class="skeuo-fader-channel">
+                                <div class="skeuo-fader-track">
+                                    <div class="skeuo-fader-thumb" style="bottom: 20%;">
+                                        <div class="skeuo-fader-line"></div>
+                                    </div>
+                                </div>
+                                <span class="skeuo-knob-label">NOISE</span>
+                            </div>
+                            <!-- Master Fader -->
+                            <div class="skeuo-fader-channel master-channel">
+                                <div class="skeuo-fader-track">
+                                    <div class="skeuo-fader-thumb red" style="bottom: 60%;">
+                                        <div class="skeuo-fader-line"></div>
+                                    </div>
+                                </div>
+                                <span class="skeuo-knob-label" style="color: #a8201a;">MAIN</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+</div>

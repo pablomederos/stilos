@@ -1,0 +1,73 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-popart-layout @($"demo-{Model.Id}")">
+
+    <div class="popart-page">
+
+        <div class="popart-halftone-bg"></div>
+
+        <header class="popart-header">
+            <div class="popart-logo">POP!</div>
+            <nav class="popart-nav">
+                <a href="#">BOOM</a>
+                <a href="#">ZAP</a>
+                <a href="#">WOW</a>
+            </nav>
+        </header>
+
+        <section class="popart-hero">
+            <div class="popart-sticker popart-sticker-woman">
+                <img src="/images/demos/pop_woman.png" alt="Pop Art Woman" width="400" height="400" />
+
+
+            </div>
+            <div class="popart-speech-bubble">
+                <h3 class="popart-title">@Model.Name.ToUpper()</h3>
+                <div class="popart-bubble-tail"></div>
+            </div>
+            <p class="popart-subtitle">@Model.Description</p>
+            <div class="popart-action-lines">
+                <span class="popart-star">★</span>
+                <button class="popart-btn">¡CLICK HERE!</button>
+                <span class="popart-star">★</span>
+            </div>
+        </section>
+
+        <section class="popart-warhol-grid">
+            <div class="popart-warhol-cell cell-1">
+                <img src="/images/demos/pop_soda.png" alt="Pop Soda 1" width="400" height="400" />
+
+            </div>
+            <div class="popart-warhol-cell cell-2">
+                <img src="/api/img?seed=pop2&w=400&h=400" alt="Pop Art repeat" width="400" height="400" />
+            </div>
+            <div class="popart-warhol-cell cell-3">
+                <img src="/api/img?seed=pop3&w=400&h=400" alt="Pop Art repeat" width="400" height="400" />
+            </div>
+            <div class="popart-warhol-cell cell-4">
+                <img src="/api/img?seed=pop4&w=400&h=400" alt="Pop Art repeat" width="400" height="400" />
+            </div>
+        </section>
+
+        <section class="popart-blocks">
+            <div class="popart-block popart-block-cyan">
+                <span class="popart-onomatopoeia">BOOM!</span>
+                <p>@Model.Emotion</p>
+            </div>
+            <div class="popart-block popart-block-magenta">
+                <span class="popart-onomatopoeia">ZAP!</span>
+                <p>@Model.Sectors</p>
+            </div>
+            <div class="popart-block popart-block-yellow">
+                <span class="popart-onomatopoeia">POW!</span>
+                <p>Colores CMYK puros, puntos Ben-Day y contornos negros gruesos.</p>
+            </div>
+        </section>
+
+        <footer class="popart-footer">
+            <span class="popart-footer-text">© POP ART STUDIO — ALL RIGHTS RESERVED — MAKE IT LOUD</span>
+        </footer>
+
+    </div>
+
+</div>

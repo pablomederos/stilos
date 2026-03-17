@@ -1,0 +1,93 @@
+﻿@page
+@using Stilos.Models
+@using Stilos.Services
+@model Stilos.Pages.IndexModel
+@{
+    ViewData["Title"] = "Catálogo de 54+ Estilos de Diseño Web";
+    ViewData["MetaDescription"] = "Explora más de 54 estilos de diseño web con descripciones detalladas y demos interactivas. Minimalismo, cyberpunk, art deco, glassmorphism y más.";
+}
+
+<section class="hero">
+    <div class="hero-badge">✦ Guía Visual Interactiva</div>
+    <h1>Todos los estilos de<br /><span class="highlight">diseño web</span> en un solo lugar</h1>
+    <p class="hero-subtitle">
+        Explora más de 54 estilos de diseño organizados en 11 familias.
+        Cada uno con su filosofía, paleta de colores y demo visual.
+    </p>
+    <div class="hero-stats">
+        <div class="hero-stat">
+            <div class="hero-stat-number">54+</div>
+            <div class="hero-stat-label">Estilos</div>
+        </div>
+        <div class="hero-stat">
+            <div class="hero-stat-number">11</div>
+            <div class="hero-stat-label">Familias</div>
+        </div>
+        <div class="hero-stat">
+            <div class="hero-stat-number">100%</div>
+            <div class="hero-stat-label">CSS Puro</div>
+        </div>
+    </div>
+
+    <div style="margin-top: 2rem; display: flex; justify-content: center;">
+        <a href="#descargar-skill" class="hero-skill-preview" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.25rem; border-radius: 999px; background: var(--bg-secondary, rgba(0,0,0,0.05)); color: var(--text-primary, inherit); text-decoration: none; font-size: 0.95rem; border: 1px solid var(--border-color, rgba(0,0,0,0.1)); transition: transform 0.2s ease, background 0.2s ease;">
+            <span style="font-size: 1.1em;">🤖</span>
+            <span>Descarga el <strong>Skill para IA</strong> al final de la página</span>
+            <span style="font-size: 0.8em; opacity: 0.7;">↓</span>
+        </a>
+    </div>
+</section>
+
+<section class="accordion-section" aria-label="Catálogo de estilos">
+    @foreach (var family in Model.Families)
+    {
+        <article class="family-group animate-in" id="family-@family.Number">
+            <div class="family-header">
+                <span class="family-icon">@family.Icon</span>
+                <span class="family-numeral">@family.RomanNumeral</span>
+                <h2 class="family-name">@family.Name</h2>
+                <span class="family-count">@family.Styles.Count estilos</span>
+            </div>
+            <div class="styles-list">
+                @foreach (var style in family.Styles)
+                {
+                    var isExpanded = Model.SelectedStyleId == style.Id;
+                    <div class="style-item" data-style-id="@style.Id" data-expanded="@(isExpanded ? "true" : "false")" id="style-@style.Id">
+                        <button class="style-trigger" aria-expanded="@(isExpanded ? "true" : "false")" aria-controls="panel-@style.Id" aria-label="Ver detalles de @style.Name">
+
+                            <span class="style-trigger-name">@style.Name</span>
+                            <span class="style-trigger-emotion">@style.Emotion</span>
+                            <span class="style-trigger-arrow">▼</span>
+                        </button>
+                        <div class="style-panel" id="panel-@style.Id" role="region">
+                            <div class="style-panel-inner">
+                                <p class="style-description">@style.Description</p>
+                                <div class="style-meta">
+                                    <div class="style-meta-item">
+                                        <span class="style-meta-label">Emoción:</span>
+                                        <span class="style-meta-value">@style.Emotion</span>
+                                    </div>
+                                    <div class="style-meta-item">
+                                        <span class="style-meta-label">Sectores:</span>
+                                        <span class="style-meta-value">@style.Sectors</span>
+                                    </div>
+                                </div>
+                                <div class="style-demo">
+                                    <div class="style-demo-header">
+                                        <span class="style-demo-dot"></span>
+                                        <span class="style-demo-dot"></span>
+                                        <span class="style-demo-dot"></span>
+                                        <span>demo — @style.Id</span>
+                                    </div>
+                                    <div class="style-demo-body immersive-demo-container demo-@style.Id">
+                                        @await Html.PartialAsync($"Demos/_Demo{style.TemplateType}", style)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </article>
+    }
+</section>

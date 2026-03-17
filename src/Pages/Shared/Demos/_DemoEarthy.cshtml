@@ -1,0 +1,69 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-earthy-layout @($"demo-{Model.Id}")">
+    <!-- Static noise texture overlay -->
+    <div class="earthy-texture-overlay"></div>
+
+    <header class="earthy-header">
+        <h3 class="earthy-brand">CERÁMICA & TIERRA</h3>
+        <nav class="earthy-nav">
+            <a href="#">Taller</a>
+            <a href="#">Materiales</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="earthy-main">
+        <section class="earthy-hero">
+            <div class="earthy-hero-text">
+                <span class="earthy-label">Artesanía Lenta</span>
+                <h4 class="earthy-title">@Model.Name</h4>
+                <p class="earthy-description">@Model.Description. Reconectando con la arcilla húmeda, la calidez del sol y el paso del tiempo.</p>
+                <button class="earthy-btn">Descubrir el Proceso</button>
+            </div>
+            <div class="earthy-hero-image">
+                <div class="image-wrapper">
+                    <!-- A warm, natural light ceramic/clay image via unsplash -->
+                    <img src="/api/img?seed=earthy_clay&w=800&h=1000" alt="Artesanía en arcilla con luz natural" width="800" height="1000" />
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="earthy-materials">
+            <h4 class="earthy-section-title">Paleta Material</h4>
+
+            <div class="materials-grid">
+                <div class="material-card">
+                    <div class="mat-color c-arena"></div>
+                    <h4>Arena y Avena</h4>
+
+                    <p>Fondos cálidos, sin blanquear.</p>
+                </div>
+                <div class="material-card">
+                    <div class="mat-color c-terracota"></div>
+                    <h4>Terracota</h4>
+
+                    <p>Acentos cálidos de barro horneado.</p>
+                </div>
+                <div class="material-card">
+                    <div class="mat-color c-musgo"></div>
+                    <h4>Verde Musgo</h4>
+
+                    <p>Tonos naturales para anclar la vista.</p>
+                </div>
+                <div class="material-card">
+                    <div class="mat-color c-carbon"></div>
+                    <h4>Carbón Cálido</h4>
+
+                    <p>Tipografía pesada, nunca negro puro.</p>
+                </div>
+            </div>
+        </section>
+        
+        <blockquote class="earthy-quote">
+            "La perfección es plástica; la belleza real reside en la textura rugosa de lo que ha sido tocado por manos humanas."
+        </blockquote>
+    </main>
+</div>

@@ -1,0 +1,92 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-glassmorphism @($"demo-{Model.Id}")">
+    <!-- Fondos Vibrantes / Blobs animadas -->
+    <div class="glass-bg-blob glass-bg-blob-1"></div>
+    <div class="glass-bg-blob glass-bg-blob-2"></div>
+    <div class="glass-bg-blob glass-bg-blob-3"></div>
+
+    <div class="glass-container">
+        <!-- Dashboard Wrapper de Cristal -->
+        <div class="glass-panel glass-main-app">
+            
+            <aside class="glass-sidebar">
+                <div class="glass-logo">
+                    <div class="glass-logo-icon"></div>
+                    <span class="glass-logo-text">@Model.Name</span>
+                </div>
+                <nav class="glass-nav">
+                    <button class="glass-nav-item active">
+                        <span class="glass-nav-icon">⊞</span> Overview
+                    </button>
+                    <button class="glass-nav-item">
+                        <span class="glass-nav-icon">◷</span> History
+                    </button>
+                    <button class="glass-nav-item">
+                        <span class="glass-nav-icon">⚙</span> Settings
+                    </button>
+                </nav>
+                <div class="glass-user-card">
+                    <div class="glass-avatar"></div>
+                    <div class="glass-user-info">
+                        <div class="glass-user-name">User</div>
+                        <div class="glass-user-role">Pro Account</div>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="glass-content">
+                <header class="glass-header">
+                    <h3 class="glass-title">Visual Depth & Blur</h3>
+                    <div class="glass-search">
+                        <input type="text" placeholder="Search operations..." class="glass-input" aria-label="Search operations" autocomplete="one-time-code" spellcheck="false" data-lpignore="true" data-bitwarden-watching="false" />
+                    </div>
+                </header>
+
+                <div class="glass-widgets-grid">
+                    <div class="glass-panel glass-widget">
+                        <h4 class="glass-widget-title">Performance</h4>
+
+                        <div class="glass-chart-placeholder">
+                            <div class="glass-bar" style="height: 60%"></div>
+                            <div class="glass-bar" style="height: 80%"></div>
+                            <div class="glass-bar" style="height: 40%"></div>
+                            <div class="glass-bar" style="height: 100%"></div>
+                            <div class="glass-bar" style="height: 70%"></div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel glass-widget">
+                        <h4 class="glass-widget-title">Details</h4>
+
+                        <p class="glass-widget-desc">
+                            @Model.Description
+                        </p>
+                        <button class="glass-btn">Read more</button>
+                    </div>
+
+                    <div class="glass-panel glass-widget glass-widget-full">
+                        <h4 class="glass-widget-title">Active Processes</h4>
+
+                        <div class="glass-list">
+                            <div class="glass-list-item">
+                                <div class="glass-item-icon">↻</div>
+                                <div class="glass-item-content">
+                                    <div class="glass-item-title">Background Blur Rendering</div>
+                                    <div class="glass-item-status">Active</div>
+                                </div>
+                            </div>
+                            <div class="glass-list-item">
+                                <div class="glass-item-icon">⚡</div>
+                                <div class="glass-item-content">
+                                    <div class="glass-item-title">Edge Highlight Calculation</div>
+                                    <div class="glass-item-status">Active</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>

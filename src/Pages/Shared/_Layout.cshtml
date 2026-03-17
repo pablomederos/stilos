@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] — Stilos · Guía Visual de Estilos CSS</title>
+    <link rel="icon" href="~/favicon.ico" sizes="any" />
+    <link rel="icon" href="~/favicon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="~/favicon-16x16.png" type="image/png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="~/apple-touch-icon.png" sizes="180x180" />
+    <meta name="description" content="@(ViewData["MetaDescription"] ?? "Explora más de 54 estilos de diseño web con demos interactivas. Guía visual completa de CSS: minimalismo, cyberpunk, art deco, glassmorphism y más.")" />
+    <meta name="author" content="Pablo Gabriel Mederos - LaCuevaLab" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Stilos — Catálogo Visual de Estilos CSS" />
+    <meta property="og:description" content="54+ estilos de diseño web documentados con descripciones detalladas y demos interactivas." />
+    <meta property="og:locale" content="es_ES" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Stilos — Catálogo Visual de Estilos CSS" />
+
+    <link rel="canonical" href="@Context.Request.Scheme://@(Context.Request.Host)@(Context.Request.Path)@(Context.Request.QueryString)" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2" as="font" type="font/woff2" crossorigin />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/css/critical.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /></noscript>
+
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="/" class="logo" aria-label="Stilos — Inicio">
+                <i class="logo-icon"></i>
+                <span class="logo-text">Stilos</span>
+            </a>
+            <p class="header-tagline">Catálogo Visual de Estilos CSS</p>
+        </div>
+    </header>
+
+    <main class="site-main">
+        @RenderBody()
+    </main>
+
+    <section class="cta-skill" id="descargar-skill">
+        <div class="cta-inner">
+            <div class="cta-badge">🤖 Skill para IA</div>
+            <h2 class="cta-title">Lleva estos estilos a tu flujo de trabajo con IA</h2>
+            <p class="cta-description">
+                Descarga el <strong>CSS Style Guide Skill</strong> y úsalo con tus herramientas de
+                inteligencia artificial favoritas. Genera aplicaciones web con estilos profesionales
+                predefinidos directamente desde tu asistente de código.
+            </p>
+            <div class="cta-features">
+                <div class="cta-feature">
+                    <span class="cta-feature-icon">📋</span>
+                    <span>54+ estilos documentados</span>
+                </div>
+                <div class="cta-feature">
+                    <span class="cta-feature-icon">🎨</span>
+                    <span>Paletas, tipografía y animaciones</span>
+                </div>
+                <div class="cta-feature">
+                    <span class="cta-feature-icon">⚡</span>
+                    <span>Variables CSS listas para usar</span>
+                </div>
+                <div class="cta-feature">
+                    <span class="cta-feature-icon">🚫</span>
+                    <span>Anti-patrones por estilo</span>
+                </div>
+            </div>
+            <div class="cta-actions" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="/assets/css-style-guide.skill" class="cta-button" download="css-style-guide.skill">
+                    <span class="cta-button-icon">⬇</span>
+                    Descargar Skill
+                </a>
+                <button class="cta-button cta-button-secondary" id="btn-share-trigger">
+                    <span class="cta-button-icon">↗</span>
+                    Compartir
+                </button>
+            </div>
+            
+            <div class="cta-instructions" style="margin-top: 2rem; text-align: left; background: rgba(0,0,0,0.05); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(0,0,0,0.1); max-width: 600px; margin-left: auto; margin-right: auto;">
+                <h3 style="margin-top: 0; font-size: 1.1rem; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
+                    <span>⚙️</span> Cómo instalar el skill:
+                </h3>
+                <ol style="margin: 0; padding-left: 1.5rem; font-size: 0.95rem; line-height: 1.6; color: inherit;">
+                    <li>Descarga el archivo <code>css-style-guide.skill</code>.</li>
+                    <li>Se trata de un archivo ZIP, por lo que puedes renombrarlo a <code>.zip</code> si es necesario y <strong>descomprímelo</strong>.</li>
+                    <li>Coloca la carpeta extraída dentro del directorio <code>.agent/skills/</code> (o la ruta de skills que defina tu agente) de tu proyecto.</li>
+                    <li>Verifica que la ruta final sea algo como <code>.agent/skills/css-style-guide/SKILL.md</code>.</li>
+                </ol>
+            </div>
+
+            <p class="cta-note" style="margin-top: 1.5rem;">Compatible con agentes que soportan el formato de Skills en Markdown</p>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>&copy; @DateTime.Now.Year <strong>Pablo Gabriel Mederos - LaCuevaLab</strong> · Stilos — Guía Visual de Estilos CSS</p>
+            <a href="https://github.com/pablomederos/stilos" class="footer-github-link" target="_blank" rel="noopener noreferrer" aria-label="Repositorio de GitHub">
+                <svg height="24" width="24" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+                <span>Repositorio</span>
+            </a>
+        </div>
+    </footer>
+
+    <script src="~/js/site.js" asp-append-version="true" defer></script>
+
+    <!-- Share Modal -->
+    <dialog id="share-modal" class="modal-overlay">
+        <div class="modal-header">
+            <h3>Compartir Stilos</h3>
+            <button class="modal-close" id="modal-close" aria-label="Cerrar">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p>Comparte este catálogo visual con tu red:</p>
+            <div class="share-grid">
+                <a href="#" class="share-option" data-platform="whatsapp">
+                    <span class="share-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 2c-5.523 0-10 4.477-10 10 0 1.766.453 3.422 1.25 4.875l-1.328 4.859 4.969-1.313c1.375.75 2.953 1.188 4.625 1.188 5.523 0 10-4.477 10-10s-4.477-10-10-10zm0 18.438c-1.5 0-2.906-.391-4.125-1.078l-.297-.172-3.063.813.828-3.016-.188-.313a8.311 8.311 0 01-1.281-4.453c0-4.609 3.75-8.359 8.359-8.359 4.609 0 8.359 3.75 8.359 8.359s-3.75 8.359-8.359 8.359zm4.781-6.5c-.266-.125-1.578-.781-1.828-.875-.25-.094-.438-.141-.625.141-.188.281-.719.875-.875 1.063-.156.188-.313.219-.578.094-.266-.141-1.125-.422-2.141-1.313-.797-.719-1.328-1.609-1.484-1.875-.156-.266-.016-.406.125-.531.125-.109.266-.313.406-.469.141-.156.188-.266.281-.438.094-.172.047-.328-.016-.469-.063-.141-.625-1.5-.859-2.063-.219-.547-.453-.469-.625-.469s-.359-.016-.547-.016c-.188 0-.5.078-.766.359-.266.281-1.016.984-1.016 2.406s1.031 2.813 1.172 3c.141.188 2.031 3.109 4.922 4.359.688.297 1.219.469 1.641.609.688.219 1.313.188 1.813.109.547-.078 1.578-.641 1.813-1.266.234-.625.234-1.156.156-1.266-.078-.109-.281-.172-.547-.297z"/></svg>
+                    </span>
+                    <span class="share-label">WhatsApp</span>
+                </a>
+                <a href="#" class="share-option" data-platform="twitter">
+                    <span class="share-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932L18.901 1.153zM17.61 20.644h2.039L6.486 3.24H4.298L17.61 20.644z"/></svg>
+                    </span>
+                    <span class="share-label">Twitter</span>
+                </a>
+                <a href="#" class="share-option" data-platform="linkedin">
+                    <span class="share-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </span>
+                    <span class="share-label">LinkedIn</span>
+                </a>
+                <button class="share-option" data-platform="copy" id="btn-copy-link">
+                    <span class="share-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                    </span>
+                    <span class="share-label" id="copy-label">Copiar enlace</span>
+                </button>
+            </div>
+        </div>
+    </dialog>
+</body>
+</html>

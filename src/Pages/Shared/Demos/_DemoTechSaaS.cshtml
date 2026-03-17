@@ -1,0 +1,97 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-techsaas-layout @($"demo-{Model.Id}")">
+    <div class="techsaas-bg-shapes">
+        <div class="ts-shape ts-shape-1"></div>
+        <div class="ts-shape ts-shape-2"></div>
+        <div class="ts-shape ts-shape-3"></div>
+    </div>
+    
+    <nav class="techsaas-nav">
+        <div class="nav-logo">
+            <span class="logo-icon"></span>
+            <span class="logo-text">Stilos<span style="font-weight: 400; color: #6b7280;">SaaS</span></span>
+        </div>
+        <div class="nav-links">
+            <span class="active">Product</span>
+            <span>Solutions</span>
+            <span>Pricing</span>
+        </div>
+        <div class="nav-actions">
+            <button class="techsaas-btn-text">Sign In</button>
+            <button class="techsaas-btn-outline">Start Free Trial</button>
+        </div>
+    </nav>
+
+    <main class="techsaas-hero">
+        <div class="techsaas-hero-content">
+            <div class="techsaas-badge">✨ Nuevo: IA Integrada</div>
+            <h3 class="techsaas-title">@Model.Name</h3>
+            <p class="techsaas-subtitle">@Model.Description</p>
+            <div class="techsaas-cta-group">
+                <button class="techsaas-btn-primary">Empieza gratis</button>
+                <button class="techsaas-btn-secondary">
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    Ver demo
+                </button>
+            </div>
+        </div>
+
+        <div class="techsaas-hero-visual">
+            <!-- Main Glass Card -->
+            <div class="techsaas-glass-card ts-main-card">
+                <div class="ts-card-header">
+                    <div class="ts-card-dots">
+                        <span class="c-dot red"></span>
+                        <span class="c-dot yellow"></span>
+                        <span class="c-dot green"></span>
+                    </div>
+                </div>
+                <div class="ts-card-body">
+                    <div class="ts-chart-header">
+                        <div class="ts-chart-title">Revenue Growth</div>
+                        <div class="ts-chart-badge">+24.5%</div>
+                    </div>
+                    <div class="ts-chart-mockup">
+                        <div class="ts-chart-bar" style="height: 40%"></div>
+                        <div class="ts-chart-bar" style="height: 60%"></div>
+                        <div class="ts-chart-bar" style="height: 45%"></div>
+                        <div class="ts-chart-bar" style="height: 80%"></div>
+                        <div class="ts-chart-bar" style="height: 65%"></div>
+                        <div class="ts-chart-bar" style="height: 95%"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Floating Data Card -->
+            <div class="techsaas-glass-card ts-floating-card">
+                <div class="ts-stat-icon"></div>
+                <div class="ts-stat-info">
+                    <div class="ts-stat-value">99.9%</div>
+                    <div class="ts-stat-label">Uptime SLA</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="techsaas-features">
+        <div class="techsaas-feature-card">
+            <div class="ts-feature-icon icon-blue"></div>
+            <h4>Glassmorphism</h4>
+
+            <p>Tarjetas translúcidas sobre fondos abstractos.</p>
+        </div>
+        <div class="techsaas-feature-card">
+            <div class="ts-feature-icon icon-purple"></div>
+            <h4>Espacio Limpio</h4>
+
+            <p>Respiración visual que transmite confianza.</p>
+        </div>
+        <div class="techsaas-feature-card">
+            <div class="ts-feature-icon icon-gradient"></div>
+            <h4>Geometría</h4>
+
+            <p>Tipografía sana y componentes precisos.</p>
+        </div>
+    </section>
+</div>

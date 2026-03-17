@@ -1,0 +1,51 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-anti-design @($"demo-{Model.Id}")">
+    <div class="anti-bg-pattern"></div>
+    <div class="anti-bg-flash"></div>
+    <div class="anti-cursor-trap"></div>
+
+    <header class="anti-header">
+        <marquee scrollamount="45" direction="right" class="anti-marquee fast">
+            <h3>@Model.Name - WARNING WARNING WARNING WARNING</h3>
+        </marquee>
+        <marquee scrollamount="5" direction="left" class="anti-marquee slow">
+            <h4>DO NOT PROCEED - DO NOT PROCEED - DO NOT PROCEED</h4>
+        </marquee>
+        <nav class="anti-nav">
+            <button class="anti-hostile-btn"
+                onmouseover="this.style.transform='translate(' + (Math.random()*300-150) + 'px, ' + (Math.random()*300-150) + 'px) rotate(' + (Math.random()*360) + 'deg)'; this.style.fontSize=(Math.random()*50+10)+'px';">
+                MENU
+            </button>
+            <a href="#" class="anti-hidden-link">TOS (INVISIBLE)</a>
+            <div class="anti-fake-button">NOT A BUTTON</div>
+        </nav>
+    </header>
+
+    <main class="anti-main">
+        <div class="anti-overlap-zone">
+            <!-- Overlapping chaos texts -->
+            <h4 class="anti-chaos-text" style="--rot:-25deg; --clr:#00ff00; --bg:#ff0000; left:5%; top:10%; z-index: 50;">ERROR 10110</h4>
+            <h4 class="anti-chaos-text" style="--rot:85deg; --clr:#ffff00; --bg:#0000ff; left:40%; top:20%; z-index: 20; mix-blend-mode: difference;">SYSTEM FAILURE</h4>
+            
+            <p class="anti-chaos-text anti-description" style="--rot:10deg; --clr:#ff00ff; --bg:#00ffff; left:20%; top:30%; z-index: 30; line-height: 0.6;">
+                @Model.Description
+            </p>
+
+            <p class="anti-text-blob" style="left:50%; top:60%;">WHY ARE YOU STILL HERE? GO AWAY.</p>
+
+            <img src="/api/img?seed=anti&w=400&h=400" class="anti-ugly-img" alt="random distortion" width="400" height="400" />
+            <img src="/api/img?seed=chaos&w=200&h=500" class="anti-ugly-img-2" alt="more distortion" width="200" height="500" />
+
+            
+            <a href="#" class="anti-spin-btn">CLICK MEEEEEE</a>
+            
+            <div class="anti-useless-form">
+                <input type="text" value="You can't type here" readonly class="anti-input" aria-label="Readonly text field" autocomplete="off" data-bitwarden-watching="false" />
+                <input type="radio" checked class="anti-radio" style="transform: scale(5);" aria-label="Radio button" autocomplete="off" data-bitwarden-watching="false" />
+                <input type="checkbox" class="anti-checkbox" style="transform: scale(8) rotate(45deg);" aria-label="Checkbox" autocomplete="off" data-bitwarden-watching="false" />
+                <button class="anti-submit" onmouseover="this.style.left=(Math.random()*80)+'%'; this.style.top=(Math.random()*80)+'%';">SUBMIT</button>
+            </div>
+        </div>
+    </main>
+</div>

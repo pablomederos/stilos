@@ -1,0 +1,73 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-biomorphic-layout @($"demo-{Model.Id}")">
+    <!-- Fluid background blobs -->
+    <div class="bio-bg-blob bio-blob-1"></div>
+    <div class="bio-bg-blob bio-blob-2"></div>
+
+    <header class="bio-header">
+        <div class="bio-logo">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Natura.</span>
+        </div>
+        <nav class="bio-nav">
+            <a href="#">Respirar</a>
+            <a href="#">Fluir</a>
+            <a href="#">Crecer</a>
+        </nav>
+        <button class="bio-btn">Comenzar viaje</button>
+    </header>
+
+    <main class="bio-main">
+        <div class="bio-content">
+            <h3 class="bio-title">@Model.Name</h3>
+            <p class="bio-description">@Model.Description. Sustituye la dureza del píxel por la suavidad de la gota.</p>
+            <div class="bio-actions">
+                <button class="bio-btn bio-btn-primary">Descubrir</button>
+                <a href="#" class="bio-link">Aprender más</a>
+            </div>
+        </div>
+
+        <div class="bio-visual">
+            <div class="bio-card-blob">
+                <img src="/api/img?seed=biomorphic_plant&w=400&h=400" alt="Planta natural fluida" class="bio-organic-image" width="400" height="400" />
+
+
+            </div>
+            <div class="bio-floating-info">
+                <span class="bio-dot"></span>
+                <div>
+                    <div class="bio-info-title">Equilibrio Natural</div>
+                    <div class="bio-info-desc">Flujo ininterrumpido</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="bio-wave-divider">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,60 C320,120 420,-60 720,60 C1020,180 1120,-60 1440,60 L1440,120 L0,120 Z"></path>
+        </svg>
+    </div>
+    
+    <section class="bio-features">
+        <div class="bio-feature">
+            <div class="bio-feature-icon" style="background-color: #87A89B;"></div>
+            <h4>Curvas Amébicas</h4>
+
+            <p>Rechazo absoluto del ángulo recto. Todo fluye como el agua.</p>
+        </div>
+        <div class="bio-feature">
+            <div class="bio-feature-icon" style="background-color: #FF9F87;"></div>
+            <h4>Animaciones Lentas</h4>
+
+            <p>Transiciones largas (4-8 segundos) que respiran y mutan.</p>
+        </div>
+        <div class="bio-feature">
+            <div class="bio-feature-icon" style="background-color: #A2B9A6;"></div>
+            <h4>Colores Diluidos</h4>
+
+            <p>Tonos agua, salvia y corales pastel que alivian la vista.</p>
+        </div>
+    </section>
+</div>

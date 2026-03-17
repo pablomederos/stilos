@@ -1,0 +1,80 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-claymorphism @($"demo-{Model.Id}")">
+    <div class="clay-container">
+        
+        <header class="clay-header">
+            <div class="clay-user-profile">
+                <div class="clay-avatar"></div>
+                <div class="clay-greeting">¡Hola, Alex! 👋</div>
+            </div>
+            <div class="clay-notification-btn">
+                <div class="clay-icon">🔔</div>
+            </div>
+        </header>
+
+        <section class="clay-dashboard-content">
+            
+            <!-- Main Balance Card -->
+            <div class="clay-card clay-balance-card">
+                <div class="clay-balance-label">Tu saldo disponible</div>
+                <h3 class="clay-balance-amount">$12,450.00</h3>
+
+                <div class="clay-balance-actions">
+                    <button class="clay-btn clay-btn-primary">
+                        <span class="clay-icon">⬆️</span> Enviar
+                    </button>
+                    <button class="clay-btn clay-btn-secondary">
+                        <span class="clay-icon">⬇️</span> Recibir
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quick Actions Grid -->
+            <div class="clay-quick-actions">
+                <div class="clay-action-item">
+                    <div class="clay-circle-btn clay-color-pink">
+                        <span class="clay-icon">💸</span>
+                    </div>
+                    <span class="clay-action-label">Pagar</span>
+                </div>
+                <div class="clay-action-item">
+                    <div class="clay-circle-btn clay-color-purple">
+                        <span class="clay-icon">📄</span>
+                    </div>
+                    <span class="clay-action-label">Servicios</span>
+                </div>
+                <div class="clay-action-item">
+                    <div class="clay-circle-btn clay-color-orange">
+                        <span class="clay-icon">📈</span>
+                    </div>
+                    <span class="clay-action-label">Invertir</span>
+                </div>
+                <div class="clay-action-item">
+                    <div class="clay-circle-btn clay-color-green">
+                        <span class="clay-icon">🎯</span>
+                    </div>
+                    <span class="clay-action-label">Metas</span>
+                </div>
+            </div>
+
+            <!-- Descriptive Widget -->
+            <div class="clay-card clay-info-card">
+                <h4 class="clay-info-title">Sobre este diseño</h4>
+
+                <p class="clay-info-desc">
+                    @Model.Description
+                </p>
+                
+                <div class="clay-toggle-container">
+                    <span class="clay-toggle-label">Ahorro Automático</span>
+                    <div class="clay-toggle active">
+                        <div class="clay-toggle-knob"></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+</div>

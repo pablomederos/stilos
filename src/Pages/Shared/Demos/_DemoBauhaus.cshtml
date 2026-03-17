@@ -1,0 +1,78 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-bauhaus-layout @($"demo-{Model.Id}")">
+
+    <div class="bauhaus-grid-structure">
+
+        <div class="bauhaus-sidebar">
+            <div class="bauhaus-vertical-text">bauhaus 1919–1933</div>
+            <div class="bauhaus-shape-circle"></div>
+            <div class="bauhaus-shape-triangle"></div>
+            <div class="bauhaus-shape-square"></div>
+        </div>
+
+        <main class="bauhaus-main">
+
+            <header class="bauhaus-header">
+                <nav class="bauhaus-nav">
+                    <a href="#">architektur</a>
+                    <a href="#">typographie</a>
+                    <a href="#">gestaltung</a>
+                    <a href="#">werkstatt</a>
+                </nav>
+                <div class="bauhaus-header-accent"></div>
+            </header>
+
+            <section class="bauhaus-hero">
+                <div class="bauhaus-hero-left">
+                    <span class="bauhaus-label">die neue einheit</span>
+                    <h3 class="bauhaus-title">@Model.Name.ToLower()</h3>
+                    <p class="bauhaus-subtitle">@Model.Description</p>
+                    <div class="bauhaus-hero-actions">
+                        <button class="bauhaus-btn bauhaus-btn-primary">entdecken</button>
+                        <button class="bauhaus-btn bauhaus-btn-secondary">manifest lesen</button>
+                    </div>
+                </div>
+                <div class="bauhaus-hero-right">
+                    <div class="bauhaus-composition">
+                        <div class="bauhaus-comp-circle"></div>
+                        <div class="bauhaus-comp-rect-red"></div>
+                        <div class="bauhaus-comp-rect-blue"></div>
+                        <div class="bauhaus-comp-rect-yellow"></div>
+                        <div class="bauhaus-comp-line-h"></div>
+                        <div class="bauhaus-comp-line-v"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bauhaus-cards">
+                <div class="bauhaus-card bauhaus-card-red">
+                    <span class="bauhaus-card-number">01</span>
+                    <h4>form folgt funktion</h4>
+
+                    <p>Jedes Element existiert nur wenn es eine messbare Funktion erfüllt.</p>
+                </div>
+                <div class="bauhaus-card bauhaus-card-blue">
+                    <span class="bauhaus-card-number">02</span>
+                    <h4>geometrische klarheit</h4>
+
+                    <p>Kreis, Dreieck und Quadrat sind die Bausteine jeder Komposition.</p>
+                </div>
+                <div class="bauhaus-card bauhaus-card-yellow">
+                    <span class="bauhaus-card-number">03</span>
+                    <h4>kunst und technik</h4>
+
+                    <p>Eine neue Einheit — die Verschmelzung von Handwerk und Industrie.</p>
+                </div>
+            </section>
+
+            <footer class="bauhaus-footer">
+                <div class="bauhaus-footer-line"></div>
+                <span class="bauhaus-footer-text">@Model.Emotion · @Model.Sectors</span>
+            </footer>
+
+        </main>
+
+    </div>
+
+</div>

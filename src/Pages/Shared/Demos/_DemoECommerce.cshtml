@@ -1,0 +1,29 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-ecommerce @($"demo-{Model.Id}")">
+    <nav class="ecommerce-nav">
+        <div class="ecommerce-brand">@Model.Name</div>
+        <div class="ecommerce-cart">Cart (2)</div>
+    </nav>
+    <div class="ecommerce-product-view">
+        <div class="ecommerce-gallery">
+            <div class="ecommerce-main-image">
+                <span class="ecommerce-badge">Premium Collection</span>
+            </div>
+        </div>
+        <div class="ecommerce-details">
+            <h3 class="ecommerce-product-title">The Essential @Model.Name</h3>
+            <div class="ecommerce-price">$299.00</div>
+            <div class="ecommerce-rating">★★★★★ <span class="review-count">(128 reviews)</span></div>
+            <p class="ecommerce-description">@Model.Description</p>
+            <div class="ecommerce-variants">
+                <span class="variant-label">Select Option:</span>
+                <div class="variant-options">
+                    <button class="variant-btn active">Standard</button>
+                    <button class="variant-btn">Signature</button>
+                </div>
+            </div>
+            <button class="ecommerce-add-to-cart">Add to Bag — $299.00</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-gothic-layout @($"demo-{Model.Id}")">
+    <div class="gothic-frame">
+        <div class="gothic-corner top-left"></div>
+        <div class="gothic-corner top-right"></div>
+        <div class="gothic-corner bottom-left"></div>
+        <div class="gothic-corner bottom-right"></div>
+        
+        <header class="gothic-header">
+            <nav class="gothic-nav">
+                <span>Archives</span>
+                <span class="nav-divider"></span>
+                <span>Gallery</span>
+                <span class="nav-divider"></span>
+                <span>Manifesto</span>
+            </nav>
+            <h3 class="gothic-title">@Model.Name</h3>
+            <div class="gothic-subtitle">Since the Era of Darkness</div>
+        </header>
+
+        <main class="gothic-content">
+            <div class="gothic-lace-divider"></div>
+            
+            <section class="gothic-featured">
+                <div class="gothic-image-container">
+                    <div class="gothic-image-frame">
+                        <img src="/api/img?seed=gothic_statue&w=600&h=800&grayscale=true" alt="Gothic Art" width="600" height="800" />
+
+                    </div>
+                </div>
+                <div class="gothic-text-block">
+                    <h4 class="section-title">The Victorian Mystery</h4>
+                    <p class="section-para">
+                        Under the velvet shroud of night, the cathedral whispers secrets of aged silver and crimson blood. 
+                        Every archway is a prayer in stone, every shadow a memory of candlelight flicker.
+                    </p>
+                    <div class="gothic-button">
+                        <span class="btn-text">Enter the Sanctum</span>
+                        <div class="btn-shine"></div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="gothic-lace-divider flipped"></div>
+
+            <section class="gothic-grid">
+                <div class="gothic-grid-item">
+                    <div class="item-icon">✝</div>
+                    <h5>Sacred Geometry</h5>
+                    <p>Mathematical perfection meets spiritual transcendence.</p>
+                </div>
+                <div class="gothic-grid-item">
+                    <div class="item-icon">🩸</div>
+                    <h5>Crimson Essence</h5>
+                    <p>The life force that flows through the dark corridors.</p>
+                </div>
+                <div class="gothic-grid-item">
+                    <div class="item-icon">🕯️</div>
+                    <h5>Eternal Flame</h5>
+                    <p>A single light in the vast medieval abyss.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="gothic-footer">
+            <div class="gothic-filigree"></div>
+            <p>&copy; 2026 La Cueva Lab - Gothic Noir</p>
+        </footer>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-luxury-layout @($"demo-{Model.Id}")">
+    <div class="luxury-grain-overlay"></div>
+    
+    <header class="luxury-header">
+        <nav class="luxury-nav">
+            <a href="#">COLLECTION</a>
+            <a href="#">MAISON</a>
+        </nav>
+        <div class="luxury-brand">ÉTER</div>
+        <nav class="luxury-nav">
+            <a href="#">BESPOKE</a>
+            <a href="#">JOURNAL</a>
+        </nav>
+        <button class="luxury-menu-btn-mobile">MENU</button>
+    </header>
+
+    <main class="luxury-hero">
+        <div class="luxury-hero-text">
+            <span class="luxury-subtitle">L'ART DE VIVRE</span>
+            <h3 class="luxury-title">@Html.Raw(Model.Name.Replace(" / ", " / <br class=\"luxury-mobile-br\">").Replace("High-end", "<span class=\"luxury-nowrap\">High-end</span>"))</h3>
+            <p class="luxury-description">
+                @Model.Description
+            </p>
+            
+            <a href="#" class="luxury-cta">
+                <span class="luxury-cta-text">DISCOVER EXCELLENCE</span>
+                <span class="luxury-line"></span>
+            </a>
+        </div>
+        
+        <div class="luxury-image-panel">
+            <div class="luxury-image-wrapper">
+                <!-- Imagen de alta resolución, temática de lujo / cinematográfica -->
+                <img class="luxury-image" src="/api/img?seed=luxury&w=1200&h=800" alt="Luxury Architecture or Watch" width="1200" height="800" />
+
+                <div class="luxury-image-overlay"></div>
+            </div>
+        </div>
+    </main>
+    
+    <div class="luxury-scroll-indicator luxury-scroll-mobile-hide">
+        <div class="luxury-scroll-line"></div>
+        <span>SCROLL</span>
+    </div>
+</div>

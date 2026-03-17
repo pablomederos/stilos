@@ -1,0 +1,66 @@
+@model Stilos.Models.DesignStyle
+
+<div class="demo-wrapper demo-neumorphism @($"demo-{Model.Id}")">
+    <div class="neumorph-container">
+        
+        <header class="neumorph-header">
+            <h3 class="neumorph-title">@Model.Name</h3>
+            <div class="neumorph-icon-btn">
+                <span class="neumorph-icon">≡</span>
+            </div>
+        </header>
+
+        <section class="neumorph-dashboard">
+            <div class="neumorph-card neumorph-summary">
+                <p class="neumorph-desc">@Model.Description</p>
+            </div>
+
+            <div class="neumorph-controls-grid">
+                
+                <!-- Thermostat / Circular Control -->
+                <div class="neumorph-card neumorph-thermostat">
+                    <div class="neumorph-dial">
+                        <div class="neumorph-dial-inner">
+                            <span class="neumorph-temp">22°</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Switches & Sliders -->
+                <div class="neumorph-card neumorph-toggles">
+                    <div class="neumorph-toggle-row">
+                        <span class="neumorph-label">Living Room</span>
+                        <div class="neumorph-switch active">
+                            <div class="neumorph-switch-thumb"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="neumorph-toggle-row">
+                        <span class="neumorph-label">Kitchen</span>
+                        <div class="neumorph-switch">
+                            <div class="neumorph-switch-thumb"></div>
+                        </div>
+                    </div>
+
+                    <div class="neumorph-slider-container">
+                        <span class="neumorph-label">Brightness</span>
+                        <div class="neumorph-slider-track">
+                            <div class="neumorph-slider-fill" style="width: 70%;"></div>
+                            <div class="neumorph-slider-thumb" style="left: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="neumorph-card neumorph-actions">
+                    <button class="neumorph-btn">Cancel</button>
+                    <button class="neumorph-btn primary">Apply</button>
+                    <div class="neumorph-input-group">
+                        <input type="text" class="neumorph-input" placeholder="Search devices..." aria-label="Search devices" autocomplete="one-time-code" spellcheck="false" data-lpignore="true" data-bitwarden-watching="false" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>
