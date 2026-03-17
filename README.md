@@ -4,6 +4,8 @@ Stilos es una aplicación web construida con **.NET 10 (Razor Pages)** diseñada
 
 Su propósito principal es actuar como demostración visual ("showcase") de todos los estilos documentados en el **CSS Style Guide Skill**, permitiendo explorar en vivo filosofías de diseño, tipografías, paletas de colores y componentes característicos de cada estilo.
 
+- **Url**: [https://stilos.lacuevalab.com](https://stilos.lacuevalab.com)
+
 ## Características
 
 * **54+ Estilos documentados**: Organizados en 11 familias estéticas (Minimalista, Maximalista, Interfaces, Vintage, Orgánico, etc.).
@@ -30,8 +32,6 @@ El proyecto incluye un `compose.yml` preconfigurado. Solo necesitas correr:
 ```bash
 docker compose up -d
 ```
-
-La aplicación estará disponible en `https://stilos.lacuevalab.com`.
 
 ### 2. Desarrollo Local (.NET)
 
